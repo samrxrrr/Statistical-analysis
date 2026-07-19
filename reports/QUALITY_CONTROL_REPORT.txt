@@ -1,0 +1,62 @@
+======================================================================
+QUALITY CONTROL REPORT
+======================================================================
+Generated: 2026-07-19 06:03:03.965898
+
+DIRECTORY CHECK
+----------------------------------------------------------------------
+results                  PASS
+tables                   PASS
+reports                  PASS
+scripts                  PASS
+submission               PASS
+
+DATASET CHECK
+----------------------------------------------------------------------
+Dataset exists              PASS
+Rows                        105
+Columns                     4
+Expected sample size        PASS
+Missing values              PASS
+Concentrations              [np.int64(0), np.int64(50), np.int64(100)]
+
+RECORD UNIQUENESS
+----------------------------------------------------------------------
+Unique sample identifier    NOT AVAILABLE
+Repeated observation rows   96
+Interpretation              Independent worms may legitimately share identical phenotype values.
+QC Status                   PASS
+
+GROUP COUNTS
+----------------------------------------------------------------------
+  0 µM                    35
+ 50 µM                    35
+100 µM                    35
+Equal group sizes           PASS
+
+PUBLICATION TABLES
+----------------------------------------------------------------------
+Table1_Descriptive_Statistics.csv            PASS
+Table2_Inferential_Statistics.csv            PASS
+Table3_Binary_Logistic_Regression.csv        PASS
+Table4_Ordered_Logistic_Regression.csv       PASS
+Table5_Bootstrap_Validation.csv              PASS
+Table6_Pairwise_Risk_Analysis.csv            PASS
+Table7_Statistical_Summary.csv               PASS
+
+REPORTS
+----------------------------------------------------------------------
+Results_Section.txt                          PASS
+Statistical_Analysis_Methods.txt             PASS
+Figure_Legends.txt                           PASS
+Table_Legends.txt                            PASS
+Supplementary_Statistical_Report.txt         PASS
+
+SUBMISSION PACKAGE
+----------------------------------------------------------------------
+Submission folder           PASS
+Files packaged              51
+
+======================================================================
+OVERALL STATUS : PASS
+======================================================================

@@ -1,0 +1,57 @@
+# Statistical Analysis Workflow
+
+Raw Experimental Dataset
+        │
+        ▼
+01_data_cleaning.py
+        │
+        ▼
+results/cleaned_dataset.csv
+        │
+        ▼
+02_descriptive_statistics.py
+        │
+        ▼
+03_inferential_statistics.py
+        │
+        ▼
+04_logistic_regression.py
+        │
+        ▼
+05_ordinal_logistic_statsmodels.py
+        │
+        ▼
+06_bootstrap_analysis.py
+        │
+        ▼
+07_pairwise_risk_analysis.py
+        │
+        ▼
+13_generate_table1.py
+        │
+        ▼
+14_generate_table2.py
+        │
+        ▼
+15_generate_table3.py
+        │
+        ▼
+16_generate_table4.py
+        │
+        ▼
+17_generate_table5.py
+        │
+        ▼
+18_generate_table6.py
+        │
+        ▼
+19_generate_table7.py
+        │
+        ▼
+20_generate_manuscript_reports.py
+        │
+        ▼
+21_package_submission.py
+        │
+        ▼
+Submission Package

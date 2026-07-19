@@ -1,0 +1,18 @@
+
+Figure 1.
+Dose-dependent reduction in multivulva incidence following thymoquinone treatment.
+
+Figure 2.
+Distribution of ectopic vulva severity scores across treatment groups.
+
+Figure 3.
+Binary logistic regression showing predicted probability of MUV.
+
+Figure 4.
+Ordinal logistic regression demonstrating decreasing probability of severe phenotypes.
+
+Figure 5.
+Bootstrap validation of odds ratio estimates.
+
+Figure 6.
+Pairwise risk analysis among treatment groups.

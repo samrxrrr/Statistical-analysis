@@ -1,0 +1,203 @@
+================================================================================
+REPRODUCIBILITY AUDIT REPORT
+================================================================================
+Generated : 2026-07-19 06:03:04.191690
+Project   : /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis
+
+
+SYSTEM INFORMATION
+--------------------------------------------------------------------------------
+Operating System : Linux
+Platform         : Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+Architecture     : x86_64
+Processor        : x86_64
+Python Version   : 3.12.13
+Executable       : /home/samrxrr/miniforge3/envs/austin_stats/bin/python
+
+INSTALLED PYTHON PACKAGES
+--------------------------------------------------------------------------------
+numpy                         2.5.1
+pandas                        3.0.3
+scipy                         1.18.0
+statsmodels                   0.14.6
+matplotlib                    3.11.1
+openpyxl                      3.1.5
+xlsxwriter                    3.2.9
+scikit-posthocs               0.14.0
+
+Saved -> /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/reports/SOFTWARE_VERSIONS.txt
+
+GENERATING REQUIREMENTS.TXT
+--------------------------------------------------------------------------------
+requirements.txt successfully generated.
+Output : /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/requirements.txt
+
+GENERATING ENVIRONMENT.YML
+--------------------------------------------------------------------------------
+environment.yml exported from Conda.
+Output : /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/environment.yml
+
+PROJECT DIRECTORY SNAPSHOT
+--------------------------------------------------------------------------------
+
+results/
+    bootstrap_OR.csv                                   19547 bytes
+    cleaned_dataset.csv                                 1144 bytes
+    logistic_predictions.csv                            3399 bytes
+    ordinal_predictions.csv                             1588 bytes
+    ordinal_predictions_statsmodels.csv                 1588 bytes
+
+tables/
+    Table1_Descriptive_Statistics.csv                    201 bytes
+    Table1_Descriptive_Statistics.md                     705 bytes
+    Table1_Descriptive_Statistics.xlsx                  5536 bytes
+    Table1_GroupCounts.csv                                38 bytes
+    Table2_Inferential_Statistics.csv                    767 bytes
+    Table2_Inferential_Statistics.md                    1711 bytes
+    Table2_Inferential_Statistics.xlsx                  5947 bytes
+    Table2_MUV_Frequency.csv                              46 bytes
+    Table3_Binary_Logistic_Regression.csv                194 bytes
+    Table3_Binary_Logistic_Regression.md                 504 bytes
+    Table3_Binary_Logistic_Regression.xlsx              5527 bytes
+    Table3_MUV_Percentage.csv                             64 bytes
+    Table4_Ordered_Logistic_Regression.csv               149 bytes
+    Table4_Ordered_Logistic_Regression.md                418 bytes
+    Table4_Ordered_Logistic_Regression.xlsx             5464 bytes
+    Table4_SeverityStatistics.csv                        185 bytes
+    Table5_Bootstrap_Validation.csv                      472 bytes
+    Table5_Bootstrap_Validation.md                       876 bytes
+    Table5_Bootstrap_Validation.xlsx                    5634 bytes
+    Table5_Statistical_Summary.csv                       958 bytes
+    Table5_Statistical_Summary.xlsx                     6151 bytes
+    Table6_Pairwise_Risk_Analysis.csv                    457 bytes
+    Table6_Pairwise_Risk_Analysis.md                    1133 bytes
+    Table6_Pairwise_Risk_Analysis.xlsx                  5692 bytes
+    Table7_Statistical_Summary.csv                       763 bytes
+    Table7_Statistical_Summary.md                       1423 bytes
+    Table7_Statistical_Summary.xlsx                     5929 bytes
+    archive/
+
+reports/
+    Figure_Legends.txt                                   465 bytes
+    PIPELINE_EXECUTION_LOG.txt                         36218 bytes
+    QUALITY_CONTROL_REPORT.txt                          2351 bytes
+    REPRODUCIBILITY_REPORT.txt                         10151 bytes
+    Results_Section.txt                                 1000 bytes
+    SOFTWARE_VERSIONS.txt                                505 bytes
+    Statistical_Analysis_Methods.txt                    1083 bytes
+    Statistical_Report.md                               1401 bytes
+    Supplementary_Statistical_Report.txt                 361 bytes
+    Table_Legends.txt                                    291 bytes
+    inferential_statistics.txt                           254 bytes
+    logistic_regression.txt                             1184 bytes
+    ordinal_logistic_statsmodels.txt                    1412 bytes
+
+scripts/
+    01_data_cleaning.R                                   817 bytes
+    01_data_cleaning.py                                 1881 bytes
+    02_descriptive_statistics.R                          319 bytes
+    02_descriptive_statistics.py                        2174 bytes
+    03_inferential_statistics.py                        2272 bytes
+    03_muv_analysis.R                                    319 bytes
+    03_muv_frequency_analysis.py                         292 bytes
+    04_logistic_regression.py                           1069 bytes
+    04_publication_figures.py                           2603 bytes
+    04_severity_analysis.R                               319 bytes
+    04_severity_analysis.py                              292 bytes
+    05_dose_response_analysis.py                         292 bytes
+    05_ordinal_logistic.py                              1012 bytes
+    05_ordinal_logistic_statsmodels.py                  2326 bytes
+    05_publication_figures.R                             319 bytes
+    05_results_summary.py                               2783 bytes
+    06_bootstrap_analysis.py                            1680 bytes
+    06_final_report.R                                    319 bytes
+    06_publication_figures.py                            292 bytes
+    07_risk_analysis.py                                 1658 bytes
+    07_summary_report.py                                 292 bytes
+    08_logistic_curve.py                                1728 bytes
+    09_forest_plot.py                                    876 bytes
+    10_heatmap.py                                        709 bytes
+    11_mosaic_plot.py                                    707 bytes
+    12_statistical_summary.py                           1882 bytes
+    13_generate_table1.py                               2497 bytes
+    14_generate_table2.py                               2471 bytes
+    15_generate_table3.py                               1701 bytes
+    16_generate_table4.py                               1668 bytes
+    17_generate_table5.py                               1802 bytes
+    18_generate_table6.py                               2152 bytes
+    19_generate_table7.py                               2406 bytes
+    20_generate_manuscript_reports.py                   4492 bytes
+    21_package_submission.py                            3408 bytes
+    22_quality_control.py                               5207 bytes
+    23_reproducibility_audit.py                        11997 bytes
+    24_run_pipeline.py                                  4342 bytes
+    __pycache__/
+
+GENERATING PROVENANCE
+--------------------------------------------------------------------------------
+Generated : /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/PROVENANCE.md
+
+GENERATING PIPELINE
+--------------------------------------------------------------------------------
+Generated : /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/PIPELINE.md
+
+SCRIPT INVENTORY
+--------------------------------------------------------------------------------
+01_data_cleaning.py
+02_descriptive_statistics.py
+03_inferential_statistics.py
+03_muv_frequency_analysis.py
+04_logistic_regression.py
+04_publication_figures.py
+04_severity_analysis.py
+05_dose_response_analysis.py
+05_ordinal_logistic.py
+05_ordinal_logistic_statsmodels.py
+05_results_summary.py
+06_bootstrap_analysis.py
+06_publication_figures.py
+07_risk_analysis.py
+07_summary_report.py
+08_logistic_curve.py
+09_forest_plot.py
+10_heatmap.py
+11_mosaic_plot.py
+12_statistical_summary.py
+13_generate_table1.py
+14_generate_table2.py
+15_generate_table3.py
+16_generate_table4.py
+17_generate_table5.py
+18_generate_table6.py
+19_generate_table7.py
+20_generate_manuscript_reports.py
+21_package_submission.py
+22_quality_control.py
+23_reproducibility_audit.py
+24_run_pipeline.py
+Total Python scripts : 32
+
+INTEGRITY CHECK
+--------------------------------------------------------------------------------
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/results/cleaned_dataset.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/tables/Table1_Descriptive_Statistics.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/tables/Table2_Inferential_Statistics.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/tables/Table3_Binary_Logistic_Regression.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/tables/Table4_Ordered_Logistic_Regression.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/tables/Table5_Bootstrap_Validation.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/tables/Table6_Pairwise_Risk_Analysis.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/tables/Table7_Statistical_Summary.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/reports/Results_Section.txt
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/reports/Statistical_Analysis_Methods.txt
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/reports/Supplementary_Statistical_Report.txt
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/reports/Figure_Legends.txt
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/reports/Table_Legends.txt
+
+OVERALL STATUS
+--------------------------------------------------------------------------------
+STATUS : PASS
+
+All essential project files were found.
+Project is reproducible.
+Documentation generated successfully.
+Submission package appears complete.

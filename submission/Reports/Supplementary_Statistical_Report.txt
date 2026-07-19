@@ -1,0 +1,10 @@
+
+SUPPLEMENTARY STATISTICAL REPORT
+
+All statistical analyses consistently demonstrated a significant
+dose-dependent protective effect of thymoquinone against Ras/MAPK-induced
+multivulva formation.
+
+The agreement among non-parametric analyses, regression models,
+bootstrap validation, and risk analysis provides strong support
+for the robustness of the findings.

@@ -1,0 +1,897 @@
+================================================================================
+PIPELINE EXECUTION LOG
+================================================================================
+
+Generated : 2026-07-19 06:03:05.790316
+Status    : PASS
+Completed : 23
+Failed    : 0
+Runtime   : 28.85 seconds
+
+================================================================================
+MASTER PIPELINE EXECUTION
+================================================================================
+Started : 2026-07-19 06:02:36.938005
+
+--------------------------------------------------------------------------------
+Running : 01_data_cleaning.py
+Status  : SUCCESS
+Time    : 0.39 seconds
+Output:
+============================================================
+DATA PREVIEW
+============================================================
+  Thymoquinone Concentration  ...  Multivulva presence (Yes or No)
+0                       0 ?M  ...                               No
+1                       0 ?M  ...                              Yes
+2                       0 ?M  ...                              Yes
+3                       0 ?M  ...                              Yes
+4                       0 ?M  ...                              Yes
+
+[5 rows x 3 columns]
+
+Columns:
+['Thymoquinone Concentration', 'Amount of Ectopic Vulva or Extra Pseudovulva', 'Multivulva presence (Yes or No)']
+
+Shape:
+(105, 3)
+
+Data Types:
+Thymoquinone Concentration                        str
+Amount of Ectopic Vulva or Extra Pseudovulva    int64
+Multivulva presence (Yes or No)                   str
+dtype: object
+
+Missing Values:
+Thymoquinone Concentration                      0
+Amount of Ectopic Vulva or Extra Pseudovulva    0
+Multivulva presence (Yes or No)                 0
+dtype: int64
+
+Duplicate Rows: 96
+
+Cleaned Data Preview
+   Concentration  Ectopic_Vulva  MUV  MUV_Binary
+0              0              0   No           0
+1              0              1  Yes           1
+2              0              1  Yes           1
+3              0              1  Yes           1
+4              0              1  Yes           1
+
+Summary Statistics
+        Concentration  Ectopic_Vulva  MUV  MUV_Binary
+count      105.000000     105.000000  105  105.000000
+unique            NaN            NaN    2         NaN
+top               NaN            NaN   No         NaN
+freq              NaN            NaN   54         NaN
+mean        50.000000       0.600000  NaN    0.485714
+std         41.020633       0.687806  NaN    0.502193
+min          0.000000       0.000000  NaN    0.000000
+25%          0.000000       0.000000  NaN    0.000000
+50%         50.000000       0.000000  NaN    0.000000
+75%        100.000000       1.000000  NaN    1.000000
+max        100.000000       2.000000  NaN    1.000000
+
+✓ Cleaned dataset saved to:
+results/cleaned_dataset.csv
+
+Analysis Step 1 Complete.
+--------------------------------------------------------------------------------
+Running : 02_descriptive_statistics.py
+Status  : SUCCESS
+Time    : 0.43 seconds
+Output:
+======================================================================
+DESCRIPTIVE STATISTICS
+======================================================================
+
+Overall Dataset Summary
+       Concentration  Ectopic_Vulva  MUV_Binary
+count     105.000000     105.000000  105.000000
+mean       50.000000       0.600000    0.485714
+std        41.020633       0.687806    0.502193
+min         0.000000       0.000000    0.000000
+25%         0.000000       0.000000    0.000000
+50%        50.000000       0.000000    0.000000
+75%       100.000000       1.000000    1.000000
+max       100.000000       2.000000    1.000000
+
+Sample Size
+105
+
+Observations per Concentration
+Concentration
+0      35
+50     35
+100    35
+Name: count, dtype: int64
+
+MUV Frequency
+MUV            No  Yes
+Concentration         
+0               6   29
+50             20   15
+100            28    7
+
+Percentage MUV
+MUV               No    Yes
+Concentration              
+0              17.14  82.86
+50             57.14  42.86
+100            80.00  20.00
+
+Severity Statistics
+               count      mean  median       std  min  max
+Concentration                                             
+0                 35  1.000000     1.0  0.594089    0    2
+50                35  0.514286     0.0  0.658493    0    2
+100               35  0.285714     0.0  0.621735    0    2
+
+✓ Publication tables saved successfully.
+--------------------------------------------------------------------------------
+Running : 03_inferential_statistics.py
+Status  : SUCCESS
+Time    : 1.58 seconds
+Output:
+======================================================================
+INFERENTIAL STATISTICS
+======================================================================
+
+Chi-square Test
+----------------------
+MUV            No  Yes
+Concentration         
+0               6   29
+50             20   15
+100            28    7
+
+Chi² = 28.3660
+Degrees of freedom = 2
+P-value = 0.000001
+Cramer's V = 0.5198
+
+Kruskal-Wallis Test
+----------------------
+H statistic = 23.7501
+P-value = 0.000007
+
+Dunn's Post Hoc Test (Bonferroni)
+          0         50        100
+0    1.000000  0.004576  0.000005
+50   0.004576  1.000000  0.315151
+100  0.000005  0.315151  1.000000
+
+✓ Inferential statistics saved.
+--------------------------------------------------------------------------------
+Running : 04_logistic_regression.py
+Status  : SUCCESS
+Time    : 1.54 seconds
+Output:
+Optimization terminated successfully.
+         Current function value: 0.550460
+         Iterations 5
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:             MUV_Binary   No. Observations:                  105
+Model:                          Logit   Df Residuals:                      103
+Method:                           MLE   Df Model:                            1
+Date:                Sun, 19 Jul 2026   Pseudo R-squ.:                  0.2054
+Time:                        06:02:40   Log-Likelihood:                -57.798
+converged:                       True   LL-Null:                       -72.738
+Covariance Type:            nonrobust   LLR p-value:                 4.600e-08
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          1.4024      0.376      3.729      0.000       0.665       2.140
+Dose          -1.4800      0.308     -4.810      0.000      -2.083      -0.877
+==============================================================================
+
+Odds Ratios
+             OR  CI Lower  CI Upper
+const  4.064763  1.944844  8.495437
+Dose   0.227639  0.124548  0.416060
+
+Done.
+--------------------------------------------------------------------------------
+Running : 05_ordinal_logistic_statsmodels.py
+Status  : SUCCESS
+Time    : 1.16 seconds
+Output:
+======================================================================
+ORDINAL LOGISTIC REGRESSION (OrderedModel)
+======================================================================
+                             OrderedModel Results                             
+==============================================================================
+Dep. Variable:          Ectopic_Vulva   Log-Likelihood:                -88.064
+Model:                   OrderedModel   AIC:                             182.1
+Method:            Maximum Likelihood   BIC:                             190.1
+Date:                Sun, 19 Jul 2026                                         
+Time:                        06:02:41                                         
+No. Observations:                 105                                         
+Df Residuals:                     102                                         
+Df Model:                           1                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Dose          -1.2640      0.276     -4.588      0.000      -1.804      -0.724
+0/1           -1.1255      0.328     -3.435      0.001      -1.768      -0.483
+1/2            0.8548      0.147      5.806      0.000       0.566       1.143
+==============================================================================
+
+======================================================================
+Odds Ratio
+======================================================================
+Coefficient : -1.2640
+Odds Ratio  : 0.2825
+95% CI      : (0.1646, 0.4848)
+
+Predictions saved to:
+results/ordinal_predictions_statsmodels.csv
+Report saved to:
+reports/ordinal_logistic_statsmodels.txt
+
+Done.
+--------------------------------------------------------------------------------
+Running : 06_bootstrap_analysis.py
+Status  : SUCCESS
+Time    : 3.29 seconds
+Output:
+============================================================
+BOOTSTRAP ANALYSIS
+============================================================
+
+Observed MUV proportion: 0.4857
+95% BCa CI: (0.3905, 0.5810)
+
+Observed OR: 0.228
+Bootstrap OR mean: 0.232
+95% CI: (0.094, 0.398)
+
+Bootstrap complete.
+--------------------------------------------------------------------------------
+Running : 07_risk_analysis.py
+Status  : SUCCESS
+Time    : 1.11 seconds
+Output:
+======================================================================
+PAIRWISE RISK ANALYSIS
+======================================================================
+
+
+======================================================================
+0 µM  vs  50 µM
+======================================================================
+[[29  6]
+ [15 20]]
+
+Risk 0 µM : 0.829
+Risk 50 µM : 0.429
+
+Relative Risk (RR): 0.517
+Odds Ratio: 6.444
+OR 95% CI: (2.135, 19.456)
+
+Risk Difference: -0.400
+Absolute Risk Reduction: 0.400
+Relative Risk Reduction: 0.483
+
+Fisher Exact p-value: 0.001093
+
+
+======================================================================
+0 µM  vs  100 µM
+======================================================================
+[[29  6]
+ [ 7 28]]
+
+Risk 0 µM : 0.829
+Risk 100 µM : 0.200
+
+Relative Risk (RR): 0.241
+Odds Ratio: 19.333
+OR 95% CI: (5.778, 64.689)
+
+Risk Difference: -0.629
+Absolute Risk Reduction: 0.629
+Relative Risk Reduction: 0.759
+
+Fisher Exact p-value: 0.000000
+
+
+======================================================================
+50 µM  vs  100 µM
+======================================================================
+[[15 20]
+ [ 7 28]]
+
+Risk 50 µM : 0.429
+Risk 100 µM : 0.200
+
+Relative Risk (RR): 0.467
+Odds Ratio: 3.000
+OR 95% CI: (1.034, 8.702)
+
+Risk Difference: -0.229
+Absolute Risk Reduction: 0.229
+Relative Risk Reduction: 0.533
+
+Fisher Exact p-value: 0.070287
+--------------------------------------------------------------------------------
+Running : 08_logistic_curve.py
+Status  : SUCCESS
+Time    : 4.60 seconds
+Output:
+Figure saved successfully.
+--------------------------------------------------------------------------------
+Running : 09_forest_plot.py
+Status  : SUCCESS
+Time    : 3.00 seconds
+Output:
+Forest plot saved.
+--------------------------------------------------------------------------------
+Running : 10_heatmap.py
+Status  : SUCCESS
+Time    : 3.42 seconds
+Output:
+Heatmap saved.
+--------------------------------------------------------------------------------
+Running : 11_mosaic_plot.py
+Status  : SUCCESS
+Time    : 1.69 seconds
+Output:
+Mosaic plot saved.
+--------------------------------------------------------------------------------
+Running : 12_statistical_summary.py
+Status  : SUCCESS
+Time    : 0.43 seconds
+Output:
+Analysis  ...                                 Interpretation
+0        Descriptive Statistics  ...                   Balanced experimental design
+1               Chi-square Test  ...  Strong association between dose and phenotype
+2                    Cramer's V  ...                              Large association
+3           Kruskal-Wallis Test  ...                 Severity differs across groups
+4               Dunn's Post Hoc  ...            Control differs from treated groups
+5    Binary Logistic Regression  ...                        Dose lowers odds of MUV
+6   Ordinal Logistic Regression  ...                           Dose lowers severity
+7          Bootstrap Validation  ...                                Model is robust
+8        Fisher Exact (0 vs 50)  ...               50 µM significantly reduces risk
+9       Fisher Exact (0 vs 100)  ...                   100 µM strongly reduces risk
+10     Fisher Exact (50 vs 100)  ...      Trend only; not statistically significant
+
+[11 rows x 5 columns]
+
+Done.
+--------------------------------------------------------------------------------
+Running : 13_generate_table1.py
+Status  : SUCCESS
+Time    : 0.47 seconds
+Output:
+======================================================================
+TABLE 1 GENERATED
+======================================================================
+   Thymoquinone (µM)   n  MUV Present  ...  Median  Minimum  Maximum
+0                  0  35           29  ...     1.0        0        2
+1                 50  35           15  ...     0.0        0        2
+2                100  35            7  ...     0.0        0        2
+
+[3 rows x 10 columns]
+
+Saved:
+tables/Table1_Descriptive_Statistics.csv
+tables/Table1_Descriptive_Statistics.xlsx
+tables/Table1_Descriptive_Statistics.md
+--------------------------------------------------------------------------------
+Running : 14_generate_table2.py
+Status  : SUCCESS
+Time    : 0.45 seconds
+Output:
+======================================================================
+TABLE 2 - INFERENTIAL STATISTICS
+======================================================================
+                      Analysis  ...                                     Interpretation
+0           Pearson Chi-square  ...  Strong association between treatment and MUV p...
+1                   Cramer's V  ...                                  Large effect size
+2               Kruskal-Wallis  ...        Severity differs significantly among groups
+3                Dunn Post Hoc  ...  Control differs significantly from both treatm...
+4   Binary Logistic Regression  ...           Dose significantly decreases odds of MUV
+5  Ordered Logistic Regression  ...              Dose significantly decreases severity
+6         Bootstrap Validation  ...                 Bootstrap confirms model stability
+
+[7 rows x 6 columns]
+
+Saved:
+tables/Table2_Inferential_Statistics.csv
+tables/Table2_Inferential_Statistics.xlsx
+tables/Table2_Inferential_Statistics.md
+--------------------------------------------------------------------------------
+Running : 15_generate_table3.py
+Status  : SUCCESS
+Time    : 0.49 seconds
+Output:
+======================================================================
+TABLE 3 GENERATED
+======================================================================
+                   Parameter  Coefficient (β)  ...  Odds Ratio       95% CI
+0                  Intercept           1.4024  ...       4.065  1.945–8.495
+1  Dose (per 50 µM increase)          -1.4800  ...       0.228  0.125–0.416
+
+[2 rows x 7 columns]
+
+Model Statistics
+----------------------------
+Pseudo R²      : 0.205
+Log-Likelihood : -57.798
+LLR p-value    : 4.60e-08
+
+Saved:
+tables/Table3_Binary_Logistic_Regression.csv
+tables/Table3_Binary_Logistic_Regression.xlsx
+tables/Table3_Binary_Logistic_Regression.md
+--------------------------------------------------------------------------------
+Running : 16_generate_table4.py
+Status  : SUCCESS
+Time    : 0.43 seconds
+Output:
+======================================================================
+TABLE 4 GENERATED
+======================================================================
+                   Parameter  Coefficient (β)  ...  Odds Ratio         95% CI
+0  Dose (per 50 µM increase)           -1.264  ...      0.2825  0.1646–0.4848
+
+[1 rows x 7 columns]
+
+Model Statistics
+----------------------------
+Log-Likelihood : -88.064
+AIC            : 182.128
+BIC            : 190.091
+
+Interpretation
+----------------------------
+Each 50 µM increase in thymoquinone concentration
+reduced the odds of belonging to a higher ectopic
+vulva severity category by approximately 72%.
+
+Saved:
+tables/Table4_Ordered_Logistic_Regression.csv
+tables/Table4_Ordered_Logistic_Regression.xlsx
+tables/Table4_Ordered_Logistic_Regression.md
+--------------------------------------------------------------------------------
+Running : 17_generate_table5.py
+Status  : SUCCESS
+Time    : 0.43 seconds
+Output:
+======================================================================
+TABLE 5 GENERATED
+======================================================================
+                          Metric  ...                                     Interpretation
+0        Observed MUV Proportion  ...                        Observed overall prevalence
+1  Bootstrap Mean MUV Proportion  ...  Bootstrap estimate consistent with observed value
+2               95% BCa CI (MUV)  ...                  Stable estimate of MUV prevalence
+3            Observed Odds Ratio  ...            Observed logistic regression odds ratio
+4      Bootstrap Mean Odds Ratio  ...        Bootstrap estimate confirms model stability
+5          95% Bootstrap CI (OR)  ...  Confidence interval excludes the null value (O...
+
+[6 rows x 3 columns]
+
+Summary
+----------------------------
+Bootstrap resampling confirmed the stability
+of the estimated odds ratio and MUV prevalence.
+The confidence intervals indicate robust model
+performance across resampled datasets.
+
+Saved:
+tables/Table5_Bootstrap_Validation.csv
+tables/Table5_Bootstrap_Validation.xlsx
+tables/Table5_Bootstrap_Validation.md
+--------------------------------------------------------------------------------
+Running : 18_generate_table6.py
+Status  : SUCCESS
+Time    : 0.46 seconds
+Output:
+======================================================================
+TABLE 6 GENERATED
+======================================================================
+     Comparison  ...                                 Interpretation
+0    0 vs 50 µM  ...         Significant reduction in MUV incidence
+1   0 vs 100 µM  ...  Highly significant reduction in MUV incidence
+2  50 vs 100 µM  ...       Difference not statistically significant
+
+[3 rows x 8 columns]
+
+Clinical Interpretation
+----------------------------------------------------------------------
+Thymoquinone treatment substantially reduced the
+risk of the multivulva phenotype. The greatest
+protective effect was observed at 100 µM.
+The comparison between 50 µM and 100 µM showed
+additional reduction, although it was not
+statistically significant (Fisher's exact test).
+
+Saved:
+tables/Table6_Pairwise_Risk_Analysis.csv
+tables/Table6_Pairwise_Risk_Analysis.xlsx
+tables/Table6_Pairwise_Risk_Analysis.md
+--------------------------------------------------------------------------------
+Running : 19_generate_table7.py
+Status  : SUCCESS
+Time    : 0.49 seconds
+Output:
+======================================================================
+TABLE 7 GENERATED
+======================================================================
+                      Analysis  ...                                         Conclusion
+0                MUV Incidence  ...          Dose-dependent reduction in MUV frequency
+1            Severity Analysis  ...                  Severity decreases with treatment
+2           Pearson Chi-square  ...  Strong association between treatment and pheno...
+3               Kruskal-Wallis  ...        Severity differs significantly among groups
+4   Binary Logistic Regression  ...   Each 50 µM increase markedly reduces odds of MUV
+5  Ordered Logistic Regression  ...       Higher doses reduce odds of severe phenotype
+6         Bootstrap Validation  ...                         Model estimates are robust
+7       Pairwise Risk Analysis  ...     100 µM provides the greatest protective effect
+
+[8 rows x 4 columns]
+
+Overall Conclusion
+----------------------------------------------------------------------
+Across all statistical analyses, thymoquinone
+demonstrated a significant dose-dependent
+reduction in both the incidence and severity
+of the multivulva phenotype.
+The findings were consistent across
+non-parametric tests, regression models,
+bootstrap validation, and pairwise risk analyses.
+
+Saved:
+tables/Table7_Statistical_Summary.csv
+tables/Table7_Statistical_Summary.xlsx
+tables/Table7_Statistical_Summary.md
+--------------------------------------------------------------------------------
+Running : 20_generate_manuscript_reports.py
+Status  : SUCCESS
+Time    : 0.05 seconds
+Output:
+======================================================================
+PUBLICATION REPORTS GENERATED
+======================================================================
+reports/Figure_Legends.txt
+reports/PIPELINE_EXECUTION_LOG.txt
+reports/QUALITY_CONTROL_REPORT.txt
+reports/REPRODUCIBILITY_REPORT.txt
+reports/Results_Section.txt
+reports/SOFTWARE_VERSIONS.txt
+reports/Statistical_Analysis_Methods.txt
+reports/Supplementary_Statistical_Report.txt
+reports/Table_Legends.txt
+reports/inferential_statistics.txt
+reports/logistic_regression.txt
+reports/ordinal_logistic_statsmodels.txt
+--------------------------------------------------------------------------------
+Running : 21_package_submission.py
+Status  : SUCCESS
+Time    : 0.73 seconds
+Output:
+======================================================================
+SUBMISSION PACKAGE CREATED
+======================================================================
+Location:
+/mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/submission
+
+Contents:
+Figures           8 files
+Reports          13 files
+Supplementary     1 files
+Tables           27 files
+
+README.txt created
+MANIFEST.txt created
+
+Ready for manuscript preparation.
+--------------------------------------------------------------------------------
+Running : 22_quality_control.py
+Status  : SUCCESS
+Time    : 0.53 seconds
+Output:
+======================================================================
+QUALITY CONTROL REPORT
+======================================================================
+Generated: 2026-07-19 06:03:03.965898
+
+DIRECTORY CHECK
+----------------------------------------------------------------------
+results                  PASS
+tables                   PASS
+reports                  PASS
+scripts                  PASS
+submission               PASS
+
+DATASET CHECK
+----------------------------------------------------------------------
+Dataset exists              PASS
+Rows                        105
+Columns                     4
+Expected sample size        PASS
+Missing values              PASS
+Concentrations              [np.int64(0), np.int64(50), np.int64(100)]
+
+RECORD UNIQUENESS
+----------------------------------------------------------------------
+Unique sample identifier    NOT AVAILABLE
+Repeated observation rows   96
+Interpretation              Independent worms may legitimately share identical phenotype values.
+QC Status                   PASS
+
+GROUP COUNTS
+----------------------------------------------------------------------
+  0 µM                    35
+ 50 µM                    35
+100 µM                    35
+Equal group sizes           PASS
+
+PUBLICATION TABLES
+----------------------------------------------------------------------
+Table1_Descriptive_Statistics.csv            PASS
+Table2_Inferential_Statistics.csv            PASS
+Table3_Binary_Logistic_Regression.csv        PASS
+Table4_Ordered_Logistic_Regression.csv       PASS
+Table5_Bootstrap_Validation.csv              PASS
+Table6_Pairwise_Risk_Analysis.csv            PASS
+Table7_Statistical_Summary.csv               PASS
+
+REPORTS
+----------------------------------------------------------------------
+Results_Section.txt                          PASS
+Statistical_Analysis_Methods.txt             PASS
+Figure_Legends.txt                           PASS
+Table_Legends.txt                            PASS
+Supplementary_Statistical_Report.txt         PASS
+
+SUBMISSION PACKAGE
+----------------------------------------------------------------------
+Submission folder           PASS
+Files packaged              51
+
+======================================================================
+OVERALL STATUS : PASS
+======================================================================
+
+Saved:
+reports/QUALITY_CONTROL_REPORT.txt
+--------------------------------------------------------------------------------
+Running : 23_reproducibility_audit.py
+Status  : SUCCESS
+Time    : 1.69 seconds
+Output:
+================================================================================
+REPRODUCIBILITY AUDIT
+================================================================================
+================================================================================
+REPRODUCIBILITY AUDIT REPORT
+================================================================================
+Generated : 2026-07-19 06:03:04.191690
+Project   : /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis
+
+
+SYSTEM INFORMATION
+--------------------------------------------------------------------------------
+Operating System : Linux
+Platform         : Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+Architecture     : x86_64
+Processor        : x86_64
+Python Version   : 3.12.13
+Executable       : /home/samrxrr/miniforge3/envs/austin_stats/bin/python
+
+INSTALLED PYTHON PACKAGES
+--------------------------------------------------------------------------------
+numpy                         2.5.1
+pandas                        3.0.3
+scipy                         1.18.0
+statsmodels                   0.14.6
+matplotlib                    3.11.1
+openpyxl                      3.1.5
+xlsxwriter                    3.2.9
+scikit-posthocs               0.14.0
+
+Saved -> /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/reports/SOFTWARE_VERSIONS.txt
+
+GENERATING REQUIREMENTS.TXT
+--------------------------------------------------------------------------------
+requirements.txt successfully generated.
+Output : /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/requirements.txt
+
+GENERATING ENVIRONMENT.YML
+--------------------------------------------------------------------------------
+environment.yml exported from Conda.
+Output : /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/environment.yml
+
+PROJECT DIRECTORY SNAPSHOT
+--------------------------------------------------------------------------------
+
+results/
+    bootstrap_OR.csv                                   19547 bytes
+    cleaned_dataset.csv                                 1144 bytes
+    logistic_predictions.csv                            3399 bytes
+    ordinal_predictions.csv                             1588 bytes
+    ordinal_predictions_statsmodels.csv                 1588 bytes
+
+tables/
+    Table1_Descriptive_Statistics.csv                    201 bytes
+    Table1_Descriptive_Statistics.md                     705 bytes
+    Table1_Descriptive_Statistics.xlsx                  5536 bytes
+    Table1_GroupCounts.csv                                38 bytes
+    Table2_Inferential_Statistics.csv                    767 bytes
+    Table2_Inferential_Statistics.md                    1711 bytes
+    Table2_Inferential_Statistics.xlsx                  5947 bytes
+    Table2_MUV_Frequency.csv                              46 bytes
+    Table3_Binary_Logistic_Regression.csv                194 bytes
+    Table3_Binary_Logistic_Regression.md                 504 bytes
+    Table3_Binary_Logistic_Regression.xlsx              5527 bytes
+    Table3_MUV_Percentage.csv                             64 bytes
+    Table4_Ordered_Logistic_Regression.csv               149 bytes
+    Table4_Ordered_Logistic_Regression.md                418 bytes
+    Table4_Ordered_Logistic_Regression.xlsx             5464 bytes
+    Table4_SeverityStatistics.csv                        185 bytes
+    Table5_Bootstrap_Validation.csv                      472 bytes
+    Table5_Bootstrap_Validation.md                       876 bytes
+    Table5_Bootstrap_Validation.xlsx                    5634 bytes
+    Table5_Statistical_Summary.csv                       958 bytes
+    Table5_Statistical_Summary.xlsx                     6151 bytes
+    Table6_Pairwise_Risk_Analysis.csv                    457 bytes
+    Table6_Pairwise_Risk_Analysis.md                    1133 bytes
+    Table6_Pairwise_Risk_Analysis.xlsx                  5692 bytes
+    Table7_Statistical_Summary.csv                       763 bytes
+    Table7_Statistical_Summary.md                       1423 bytes
+    Table7_Statistical_Summary.xlsx                     5929 bytes
+    archive/
+
+reports/
+    Figure_Legends.txt                                   465 bytes
+    PIPELINE_EXECUTION_LOG.txt                         36218 bytes
+    QUALITY_CONTROL_REPORT.txt                          2351 bytes
+    REPRODUCIBILITY_REPORT.txt                         10151 bytes
+    Results_Section.txt                                 1000 bytes
+    SOFTWARE_VERSIONS.txt                                505 bytes
+    Statistical_Analysis_Methods.txt                    1083 bytes
+    Statistical_Report.md                               1401 bytes
+    Supplementary_Statistical_Report.txt                 361 bytes
+    Table_Legends.txt                                    291 bytes
+    inferential_statistics.txt                           254 bytes
+    logistic_regression.txt                             1184 bytes
+    ordinal_logistic_statsmodels.txt                    1412 bytes
+
+scripts/
+    01_data_cleaning.R                                   817 bytes
+    01_data_cleaning.py                                 1881 bytes
+    02_descriptive_statistics.R                          319 bytes
+    02_descriptive_statistics.py                        2174 bytes
+    03_inferential_statistics.py                        2272 bytes
+    03_muv_analysis.R                                    319 bytes
+    03_muv_frequency_analysis.py                         292 bytes
+    04_logistic_regression.py                           1069 bytes
+    04_publication_figures.py                           2603 bytes
+    04_severity_analysis.R                               319 bytes
+    04_severity_analysis.py                              292 bytes
+    05_dose_response_analysis.py                         292 bytes
+    05_ordinal_logistic.py                              1012 bytes
+    05_ordinal_logistic_statsmodels.py                  2326 bytes
+    05_publication_figures.R                             319 bytes
+    05_results_summary.py                               2783 bytes
+    06_bootstrap_analysis.py                            1680 bytes
+    06_final_report.R                                    319 bytes
+    06_publication_figures.py                            292 bytes
+    07_risk_analysis.py                                 1658 bytes
+    07_summary_report.py                                 292 bytes
+    08_logistic_curve.py                                1728 bytes
+    09_forest_plot.py                                    876 bytes
+    10_heatmap.py                                        709 bytes
+    11_mosaic_plot.py                                    707 bytes
+    12_statistical_summary.py                           1882 bytes
+    13_generate_table1.py                               2497 bytes
+    14_generate_table2.py                               2471 bytes
+    15_generate_table3.py                               1701 bytes
+    16_generate_table4.py                               1668 bytes
+    17_generate_table5.py                               1802 bytes
+    18_generate_table6.py                               2152 bytes
+    19_generate_table7.py                               2406 bytes
+    20_generate_manuscript_reports.py                   4492 bytes
+    21_package_submission.py                            3408 bytes
+    22_quality_control.py                               5207 bytes
+    23_reproducibility_audit.py                        11997 bytes
+    24_run_pipeline.py                                  4342 bytes
+    __pycache__/
+
+GENERATING PROVENANCE
+--------------------------------------------------------------------------------
+Generated : /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/PROVENANCE.md
+
+GENERATING PIPELINE
+--------------------------------------------------------------------------------
+Generated : /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/PIPELINE.md
+
+SCRIPT INVENTORY
+--------------------------------------------------------------------------------
+01_data_cleaning.py
+02_descriptive_statistics.py
+03_inferential_statistics.py
+03_muv_frequency_analysis.py
+04_logistic_regression.py
+04_publication_figures.py
+04_severity_analysis.py
+05_dose_response_analysis.py
+05_ordinal_logistic.py
+05_ordinal_logistic_statsmodels.py
+05_results_summary.py
+06_bootstrap_analysis.py
+06_publication_figures.py
+07_risk_analysis.py
+07_summary_report.py
+08_logistic_curve.py
+09_forest_plot.py
+10_heatmap.py
+11_mosaic_plot.py
+12_statistical_summary.py
+13_generate_table1.py
+14_generate_table2.py
+15_generate_table3.py
+16_generate_table4.py
+17_generate_table5.py
+18_generate_table6.py
+19_generate_table7.py
+20_generate_manuscript_reports.py
+21_package_submission.py
+22_quality_control.py
+23_reproducibility_audit.py
+24_run_pipeline.py
+Total Python scripts : 32
+
+INTEGRITY CHECK
+--------------------------------------------------------------------------------
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/results/cleaned_dataset.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/tables/Table1_Descriptive_Statistics.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/tables/Table2_Inferential_Statistics.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/tables/Table3_Binary_Logistic_Regression.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/tables/Table4_Ordered_Logistic_Regression.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/tables/Table5_Bootstrap_Validation.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/tables/Table6_Pairwise_Risk_Analysis.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/tables/Table7_Statistical_Summary.csv
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/reports/Results_Section.txt
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/reports/Statistical_Analysis_Methods.txt
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/reports/Supplementary_Statistical_Report.txt
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/reports/Figure_Legends.txt
+[PASS] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/reports/Table_Legends.txt
+
+OVERALL STATUS
+--------------------------------------------------------------------------------
+STATUS : PASS
+
+All essential project files were found.
+Project is reproducible.
+Documentation generated successfully.
+Submission package appears complete.
+
+Generated Files
+--------------------------------------------------------------------------------
+[OK] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/reports/SOFTWARE_VERSIONS.txt
+[OK] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/requirements.txt
+[OK] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/environment.yml
+[OK] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/PROVENANCE.md
+[OK] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/PIPELINE.md
+[OK] /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/analysis/reports/REPRODUCIBILITY_REPORT.txt
+
+Audit completed.
+================================================================================
+
+================================================================================
+PIPELINE SUMMARY
+================================================================================
+Started          : 2026-07-19 06:03:05.788949
+Scripts Planned  : 23
+Completed        : 23
+Failed           : 0
+Execution Time   : 28.85 seconds
+
+Overall Status   : PASS
+The statistical pipeline completed successfully.
+All analyses finished without errors.
+================================================================================

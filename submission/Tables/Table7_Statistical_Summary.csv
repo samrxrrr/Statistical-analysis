@@ -1,0 +1,9 @@
+Analysis,Primary Result,P-value,Conclusion
+MUV Incidence,82.9% → 42.9% → 20.0%,-,Dose-dependent reduction in MUV frequency
+Severity Analysis,Mean: 1.000 → 0.514 → 0.286,-,Severity decreases with treatment
+Pearson Chi-square,χ² = 28.366,<0.000001,Strong association between treatment and phenotype
+Kruskal-Wallis,H = 23.750,0.000007,Severity differs significantly among groups
+Binary Logistic Regression,OR = 0.228,<0.001,Each 50 µM increase markedly reduces odds of MUV
+Ordered Logistic Regression,OR = 0.283,<0.001,Higher doses reduce odds of severe phenotype
+Bootstrap Validation,Bootstrap OR = 0.226,-,Model estimates are robust
+Pairwise Risk Analysis,Maximum protection at 100 µM,See pairwise tests,100 µM provides the greatest protective effect

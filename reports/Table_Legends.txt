@@ -1,0 +1,14 @@
+
+Table 1. Descriptive statistics.
+
+Table 2. Summary of inferential statistical analyses.
+
+Table 3. Binary logistic regression model.
+
+Table 4. Ordered logistic regression model.
+
+Table 5. Bootstrap validation results.
+
+Table 6. Pairwise risk analysis.
+
+Table 7. Overall statistical summary.
