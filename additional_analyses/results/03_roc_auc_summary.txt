@@ -1,0 +1,8 @@
+ROC CURVE ANALYSIS
+============================================================
+
+AUC                  : 0.779593
+Optimal threshold    : 0.802557
+Sensitivity          : 0.568627
+Specificity          : 0.888889
+Accuracy             : 0.733333

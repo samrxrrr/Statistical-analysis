@@ -1,0 +1,11 @@
+JACKKNIFE LOGISTIC REGRESSION
+============================================================
+
+               Statistic     Value
+          Full intercept  1.402355
+   Full dose coefficient -0.029600
+   Mean dose coefficient -0.029609
+     SD dose coefficient  0.000637
+Minimum dose coefficient -0.031301
+Maximum dose coefficient -0.029230
+ Maximum absolute change  0.001701

@@ -1,0 +1,16 @@
+HOSMER-LEMESHOW GOODNESS OF FIT
+============================================================
+
+ Predicted_Probability  Observations  Observed  Expected  Observed_No  Expected_No
+              0.173986            35         7  6.089508           28    28.910492
+              0.480600            35        15 16.820983           20    18.179017
+              0.802557            35        29 28.089508            6     6.910492
+
+Groups                 : 3
+Degrees of freedom     : 1
+HL statistic           : 0.693824
+P-value                : 0.40486662
+
+Interpretation:
+No evidence of lack of fit.
+Model calibration appears acceptable.
