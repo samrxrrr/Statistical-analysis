@@ -302,3 +302,106 @@ Email: *(add your preferred contact email)*
 # Acknowledgements
 
 The statistical workflow implemented in this repository was developed to provide a transparent, reproducible, and publication-ready analysis pipeline for experimental studies in Caenorhabditis elegans.
+
+---
+
+# Publication-Grade Statistical Framework (Version 2.0)
+
+The statistical framework has been expanded beyond conventional hypothesis testing to include advanced analyses commonly expected in peer-reviewed biomedical research.
+
+## Additional Statistical Analyses
+
+### Trend Analysis
+
+- Cochran–Armitage Trend Test
+
+### Effect Size Estimation
+
+- Relative Risk (RR)
+- Odds Ratio (OR)
+- Absolute Risk Reduction (ARR)
+- Relative Risk Reduction (RRR)
+- Number Needed to Treat (NNT)
+- 95% Confidence Intervals
+- Kruskal ε² Effect Size
+
+### Predictive Performance
+
+- Receiver Operating Characteristic (ROC) Curve
+- Area Under the ROC Curve (AUC)
+- Optimal Threshold Determination
+- Sensitivity
+- Specificity
+- Classification Accuracy
+
+### Model Calibration
+
+- Grouped Hosmer–Lemeshow Goodness-of-Fit Test
+
+### Robustness Assessment
+
+- Jackknife Leave-One-Out Sensitivity Analysis
+- Bootstrap Validation
+
+---
+
+# Additional Analysis Module
+
+The `additional_analyses/` directory contains independent scripts that extend the core statistical workflow.
+
+```text
+additional_analyses/
+
+├── scripts/
+│   ├── 01_cochran_armitage.py
+│   ├── 02_kruskal_epsilon_squared.py
+│   ├── 03_roc_auc.py
+│   ├── 04_hosmer_lemeshow.py
+│   ├── 05_effect_size_analysis.py
+│   ├── 06_jackknife_logistic.py
+│   └── 07_publication_tables.py
+│
+├── results/
+├── figures/
+└── tables/
+```
+
+---
+
+# Publication Outputs
+
+The repository now automatically generates:
+
+- Publication_Tables.xlsx
+- Supplementary_Tables.xlsx
+- Statistical_Report.md
+- Reproducibility_Report.md
+
+These outputs are intended for direct use during manuscript preparation and journal submission.
+
+---
+
+# Current Statistical Coverage
+
+The repository currently includes:
+
+- Descriptive Statistics
+- Pearson Chi-square Test
+- Fisher's Exact Test
+- Kruskal–Wallis Test
+- Cochran–Armitage Trend Test
+- Binary Logistic Regression
+- Ordered Logistic Regression
+- ROC/AUC Analysis
+- Hosmer–Lemeshow Calibration Test
+- Relative Risk Analysis
+- Odds Ratio Analysis
+- Bootstrap Validation
+- Jackknife Sensitivity Analysis
+- Publication-Ready Tables
+- Publication-Quality Figures
+- Reproducibility Auditing
+
+---
+
+**Current Repository Status:** Publication-grade statistical analysis framework completed.
