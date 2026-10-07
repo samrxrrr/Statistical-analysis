@@ -1,0 +1,119 @@
+============================================================
+STAGE 10 — MANUSCRIPT FORENSIC + TABLE/FIGURE AUDIT
+============================================================
+
+STATUS
+------
+PASS — architecture generated.
+
+IMPORTANT CORRECTION
+--------------------
+N=106 is NOT treated as a submitted-manuscript claim.
+The user confirmed that N=106 was not in the manuscript submitted
+to the journal. Therefore N=106 is excluded from the manuscript
+forensic audit and remains legacy/internal analysis history only.
+
+SUBMITTED MANUSCRIPT AUTHORITY
+------------------------------
+The submitted PDF is the sole authority for what was actually
+submitted to Journal of Biosciences.
+
+CURRENT DATA AUTHORITY
+----------------------
+Current authoritative dataset:
+N=343
+0 uM = 95
+50 uM = 116
+100 uM = 132
+
+PRIMARY ENDPOINT
+----------------
+Muv occurrence.
+
+SECONDARY ENDPOINT
+-------------------
+Pseudovulva count.
+
+CONDITIONAL SEVERITY
+--------------------
+Among Muv-positive animals:
+KW H = 0.155390
+P = 0.925247
+
+Therefore:
+- no progressive conditional severity reduction
+- no severity plateau claim
+- no mechanistic interpretation
+
+FINAL MAIN-TEXT ARCHITECTURE
+----------------------------
+7 figures maximum:
+F1 Experimental design
+F2 Muv prevalence
+F3 Pseudovulva distribution
+F4 Conditional severity
+F5 Pairwise RD
+F6 Permutation robustness
+F7 Threshold robustness
+
+3 tables maximum:
+T1 Primary Muv outcome
+T2 Pairwise effect sizes
+T3 Pseudovulva + conditional severity
+
+SUPPLEMENT
+----------
+S1 complete pseudovulva distribution
+S2 threshold robustness
+S3 permutation robustness
+S4 experimental-unit/metadata audit
+Additional detailed sensitivity figures may remain supplementary.
+
+MANDATORY REMOVALS
+------------------
+ROC/AUC
+Predictive classifier language
+Binary logistic regression
+Ordinal logistic regression
+Bootstrap/jackknife as manuscript-level evidence
+Severity plateau
+Direct Ras/MAPK inhibition
+Pathway activity suppression
+Unsupported toxicity absence
+Unsupported developmental-safety claims
+Biological-replicate claims based solely on N=343
+
+MANDATORY REFRAMING
+-------------------
+343 = animal-level observations.
+
+TQ concentrations = applied/surface exposure concentrations;
+internal dose was not measured.
+
+Phenotype = Ras/MAPK-associated phenotype;
+not direct molecular pathway inhibition.
+
+Toxicity/developmental safety = not independently assessed.
+
+Positive Ras/MAPK inhibitor control = absent and should be
+acknowledged as a limitation.
+
+PERMUTATION INTERPRETATION
+--------------------------
+Global and effect-size permutation tests are highly robust.
+
+However:
+strict-order permutation P = 0.161218
+>=2 ordering permutation P = 0.168638
+
+Therefore ordering-alone statistics must NOT be described as
+permutation-significant.
+
+NEXT STEP
+---------
+Do not draft the manuscript yet.
+
+First perform direct forensic reconciliation of the actual
+submitted PDF, then generate the final tables and figures,
+cross-check them independently, and only then reconstruct the
+manuscript from the frozen analytical outputs.

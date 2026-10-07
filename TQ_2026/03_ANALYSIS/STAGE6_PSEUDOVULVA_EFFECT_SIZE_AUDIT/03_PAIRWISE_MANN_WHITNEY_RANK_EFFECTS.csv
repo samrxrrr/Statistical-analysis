@@ -1,0 +1,4 @@
+treatment_uM,comparator_uM,treatment_n,comparator_n,Mann_Whitney_U_treatment_vs_comparator,two_sided_p,rank_biserial_correlation,probability_superiority_treatment_over_comparator,treatment_median,comparator_median,Holm_adjusted_p,Holm_significant_alpha_0_05
+50,0,116,95,3969.0,5.441088403486237e-05,-0.2796733212341198,0.3601633393829401,2.0,2.0,5.441088403486237e-05,True
+100,0,132,95,2071.0,2.839041397834298e-21,-0.6696969696969697,0.16515151515151516,0.0,2.0,8.517124193502894e-21,True
+100,50,132,116,4745.5,2.8634797543633703e-09,-0.3801593521421107,0.30992032392894464,0.0,2.0,5.726959508726741e-09,True

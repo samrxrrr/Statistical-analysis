@@ -1,0 +1,15 @@
+Issue,Concern,Final_disposition
+Replication,Biological/technical repeats unclear,EXPLICIT LIMITATION
+Experimental unit,Possible pseudoreplication,EXPLICIT LIMITATION
+Logistic regression,Predictive overreach,REMOVE
+ROC,Uninterpretable predictive framing,REMOVE
+Severity plateau,Unsupported,REMOVE
+Severity floor,Integer endpoint,CLARIFY
+Toxicity,Unsupported,REFRAME
+Development,Unsupported,REFRAME
+Exposure,Surface-applied,CLARIFY
+Mechanism,No molecular pathway assay,REFRAME
+Positive control,Absent,LIMITATION
+Trend,Cochran-Armitage appropriate,RETAIN
+Permutation,Distribution-free robustness,ADD
+Threshold >=2,Robust sensitivity,ADD SUPPLEMENT

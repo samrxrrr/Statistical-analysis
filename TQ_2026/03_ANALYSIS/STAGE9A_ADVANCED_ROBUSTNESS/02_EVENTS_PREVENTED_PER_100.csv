@@ -1,0 +1,3 @@
+comparison,absolute_risk_difference,Muv_positive_events_prevented_per_100,interpretation
+50_vs_0,-0.29319419237749555,29.319419237749557,negative risk difference means fewer Muv-positive observations under TQ
+100_vs_0,-0.670414673046252,67.0414673046252,negative risk difference means fewer Muv-positive observations under TQ

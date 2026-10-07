@@ -1,0 +1,30 @@
+STAGE 6 — PSEUDOVULVA EFFECT-SIZE AUDIT
+============================================================
+Input: /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/NEW TQ/03_ANALYSIS/TQ_NEW_RAW_EXTRACT.csv
+Observations: 343
+
+DESCRIPTIVE RESULTS
+0 uM: n=95, mean=1.715789474, SD=0.709557217, median=2.000000000, IQR=0.000000000, range=0-3
+50 uM: n=116, mean=1.181034483, SD=0.992135492, median=2.000000000, IQR=2.000000000, range=0-4
+100 uM: n=132, mean=0.446969697, SD=0.849915972, median=0.000000000, IQR=0.000000000, range=0-3
+
+GLOBAL INFERENCE
+Kruskal-Wallis H(2)=92.489157674, p=8.24583410572e-21, epsilon^2=0.266144581
+
+PAIRWISE EFFECTS
+50 vs 0 uM: U=3969, p=5.44108840349e-05, Holm p=5.44108840349e-05, rank-biserial r=-0.279673321
+100 vs 0 uM: U=2071, p=2.83904139783e-21, Holm p=8.5171241935e-21, rank-biserial r=-0.669696970
+100 vs 50 uM: U=4745.5, p=2.86347975436e-09, Holm p=5.72695950873e-09, rank-biserial r=-0.380159352
+
+ENDPOINT DEPENDENCY
+Muv_binary == (Pseudovulva > 0): 343/343 rows
+Muv frequency and pseudovulva count are therefore mathematically dependent representations of the same underlying phenotype.
+
+INTERPRETATION GUARDRAILS
+- Pseudovulva count is treated as a secondary phenotype-burden endpoint.
+- Negative rank-biserial values indicate lower pseudovulva burden in treatment.
+- The endpoint is not independent of the binary Muv endpoint.
+- No claim of molecular Ras/MAPK inhibition is supported by these data.
+- No toxicity/developmental safety inference is supported.
+- No biological replicate or plate/batch identifier is available.
+- n is the number of animal observations, not the number of independent biological replicates.

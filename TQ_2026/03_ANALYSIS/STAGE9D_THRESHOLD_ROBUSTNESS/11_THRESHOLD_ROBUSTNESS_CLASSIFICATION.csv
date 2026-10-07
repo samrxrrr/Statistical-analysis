@@ -1,0 +1,5 @@
+threshold,strict_monotonicity,all_pairwise_Holm_p_lt_0.05,all_LOO_same_direction,all_Bayesian_P_RD_less_0_gt_0.95,classification
+1,True,True,True,True,ROBUST PRIMARY/SENSITIVITY SIGNAL
+2,True,True,True,True,ROBUST PRIMARY/SENSITIVITY SIGNAL
+3,False,False,False,False,SPARSE EXPLORATORY THRESHOLD
+4,False,False,False,False,VERY SPARSE EXTREME THRESHOLD

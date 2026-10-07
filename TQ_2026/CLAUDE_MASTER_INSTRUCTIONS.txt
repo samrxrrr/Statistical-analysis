@@ -1,0 +1,210 @@
+CLAUDE MASTER INSTRUCTIONS — FINAL TQ MANUSCRIPT PRODUCTION
+
+PURPOSE
+Produce the complete revised manuscript for the Journal of Biosciences from the supplied authoritative dataset, frozen analyses, forensic reconciliation, publication tables, reviewer/editor comments supplied separately by the user, and the figure-generation specification.
+
+MANDATORY FIRST STEP
+Before drafting any manuscript text:
+1. Read the entire supplied ZIP/package.
+2. Read every file under 01_AUTHORITATIVE_DATA.
+3. Read every frozen analysis stage under 02_FROZEN_ANALYSES.
+4. Read every file under 03_FORENSIC_RECONCILIATION.
+5. Read all publication tables under 04_TABLES.
+6. Read the figure-generation specification under 05_FIGURES.
+7. Read the project ledger under 09_LEDGER.
+8. Read the old submitted manuscript and all reviewer/editor responses that the user attaches separately.
+9. Build an internal reconciliation of the submitted manuscript versus the authoritative revised dataset and analyses before drafting.
+10. Do not begin writing from isolated snippets.
+
+AUTHORITATIVE DATA
+Authoritative workbook:
+TQ DataSet; n=3, qualified for grading.xlsx
+
+Authoritative dataset:
+N=343 recorded animal-level observations.
+
+Groups:
+0 µM n=95
+50 µM n=116
+100 µM n=132
+
+Primary endpoint:
+Muv occurrence = pseudovulva count > 0.
+
+Secondary endpoint:
+whole-animal pseudovulva count.
+
+Conditional severity:
+pseudovulva count among Muv-positive animals only.
+
+EXPERIMENTAL-UNIT LIMITATION
+The available dataset does not contain plate IDs, batch IDs, cohort IDs, animal IDs, run IDs, randomization metadata, or equivalent clustering variables.
+
+Therefore:
+- Do not describe the 343 observations as 343 independent biological replicates.
+- Use “recorded animals” or “animal-level observations”.
+- Explicitly acknowledge the experimental-unit / pseudoreplication limitation.
+- Do not invent missing replication structure.
+
+FROZEN ANALYSIS HIERARCHY
+The following directories are authoritative analysis stages and must be read:
+
+STAGE3_DESCRIPTIVE
+STAGE4_INFERENCE
+STAGE5_EFFECT_SIZE_AUDIT
+STAGE6_PSEUDOVULVA_EFFECT_SIZE_AUDIT
+STAGE7_MODEL_AUDIT
+STAGE8_ROBUSTNESS_AUDIT
+STAGE9A1_INDEPENDENT_VERIFICATION
+STAGE9A_ADVANCED_ROBUSTNESS
+STAGE9B_EXPERIMENTAL_UNIT_AUDIT
+STAGE9C_DISTRIBUTION_DOSE_ANALYSIS
+STAGE9D_THRESHOLD_ROBUSTNESS
+STAGE9E_PERMUTATION_ROBUSTNESS
+
+Do not replace these analyses with new calculations unless explicitly requested.
+
+STAGE 7 MODEL AUDIT
+Stage 7 logistic-regression/model outputs are retained for forensic audit only.
+
+Do NOT use logistic regression, ROC/AUC, Hosmer–Lemeshow, bootstrap, jackknife, or NNT as revised-manuscript inferential results.
+
+Do not frame the study as a predictive-classification study.
+
+PRIMARY RESULT
+Muv occurrence decreases strongly across TQ exposure groups.
+
+Muv-positive:
+0 µM = 86/95 = 90.5263%
+50 µM = 71/116 = 61.2069%
+100 µM = 31/132 = 23.4848%
+
+Cochran–Armitage:
+Z=-10.129018
+chi-square(1)=102.597002
+P=4.107544e-24
+
+SECONDARY RESULT
+Whole-animal pseudovulva distributions differ strongly across exposure groups.
+
+Kruskal–Wallis:
+H=92.489158
+P=8.245834e-21
+epsilon²=0.266145
+
+CONDITIONAL SEVERITY
+Among Muv-positive animals only:
+
+Kruskal–Wallis:
+H=0.155390
+P=0.925247
+
+Interpretation:
+No detectable exposure-associated difference in conditional pseudovulva severity.
+
+Do NOT describe this as:
+- a severity plateau
+- progressive severity reduction
+- worsening or improvement after Muv development
+
+THRESHOLD ANALYSIS
+Primary threshold:
+>=1 pseudovulva.
+
+>=2 is a robustness/sensitivity threshold.
+
+>=3 and >=4 are sparse exploratory thresholds.
+
+Do not imply a continuous linear dose-response.
+
+PERMUTATION ANALYSIS
+Permutation analyses support robustness of the observed group differences.
+
+However:
+strict-order permutation P=0.161218
+threshold >=2 ordering permutation P=0.168638
+
+Therefore do not claim that permutation testing established significant strict monotonic ordering.
+
+MECHANISTIC LIMITATION
+The phenotype data do not directly establish:
+- Ras/MAPK inhibition
+- pathway activity suppression
+- direct molecular target engagement
+- ERK/RAS activity changes
+- molecular mechanism
+
+Use mechanistic language only as hypothesis-generating interpretation.
+
+TOXICITY / DEVELOPMENT LIMITATION
+There is no independent validated toxicity or developmental endpoint in the authoritative dataset.
+
+Do NOT claim:
+- absence of toxicity
+- safety
+- absence of developmental arrest
+- absence of developmental effects
+
+EXPOSURE LANGUAGE
+TQ concentrations are surface-applied exposure concentrations.
+Do not describe them as measured internal doses.
+
+OLD SUBMITTED MANUSCRIPT
+The old submitted manuscript is historical evidence of what was submitted.
+Its old numerical results are NOT authoritative for the revised manuscript.
+
+Do not carry forward obsolete:
+N=105
+n=35 per group
+old prevalence values
+old inferential statistics
+old logistic/ROC analyses
+old toxicity/developmental claims
+old plateau claim
+old mechanistic overclaims
+
+REVISED MANUSCRIPT
+The revised manuscript must be based on the authoritative N=343 dataset and frozen analyses.
+
+TABLES
+Main manuscript maximum:
+3 tables.
+
+Use the supplied publication tables as the numerical source.
+
+FIGURES
+Main manuscript maximum:
+7 figures.
+
+Final figures will be generated separately according to:
+TQ_FINAL_FIGURE_GENERATION_MASTER_SPECIFICATION.txt
+
+Do not invent or fabricate final figures.
+
+SUPPLEMENTARY MATERIAL
+Move excess tables/analyses and supporting robustness material to supplementary material as appropriate.
+
+CLAIM DISCIPLINE
+Every numerical statement in the manuscript must be traceable to the supplied authoritative dataset or frozen analysis.
+
+Do not silently reconcile discrepancies by inventing assumptions.
+
+If two supplied sources conflict:
+STOP, identify the conflict, and use the explicitly frozen authoritative analysis/data hierarchy rather than guessing.
+
+FINAL QUALITY CONTROL
+Before returning the manuscript:
+- Check every N and group n.
+- Check every percentage.
+- Check every P value.
+- Check every effect size and confidence interval.
+- Check endpoint definitions.
+- Check experimental-unit language.
+- Check that prohibited analyses are absent from inferential claims.
+- Check that mechanistic claims remain hypothesis-generating.
+- Check toxicity/developmental language.
+- Check figure count <=7 main.
+- Check table count <=3 main.
+- Check supplementary placement.
+- Check reviewer comments are explicitly addressed.
+- Check that no obsolete N=105/N=106 values have entered the revised manuscript.

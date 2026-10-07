@@ -1,0 +1,75 @@
+STAGE 9E — PERMUTATION ROBUSTNESS AUDIT
+===========================================
+
+STATUS
+------
+PASS
+
+DATA
+----
+N = 343
+Observed group sizes:
+0 uM  = 95
+50 uM = 116
+100 uM = 132
+
+PERMUTATIONS
+------------
+N = 100000
+Seed = 20261005
+
+DESIGN
+------
+Treatment labels were randomly permuted while preserving the exact
+observed group sizes.
+
+The observed phenotype values were not altered.
+
+This provides a distribution-free robustness assessment of the
+observed concentration-associated structure.
+
+PRIMARY QUESTIONS
+-----------------
+1. Is the global Muv association unusually large under random label
+   assignment?
+
+2. Are the observed pairwise risk differences unusually large?
+
+3. Is the whole-animal pseudovulva distribution unusually separated?
+
+4. Is the strict 0 > 50 > 100 Muv ordering unusually frequent?
+
+5. Does the >=2 pseudovulva threshold retain the same ordering?
+
+OBSERVED MUV PREVALENCE
+----------------------
+0 uM   = 0.905263158
+50 uM  = 0.612068966
+100 uM = 0.234848485
+
+OBSERVED STRICT ORDER
+---------------------
+True
+
+OBSERVED >=2 ORDER
+------------------
+True
+
+INTERPRETATION
+--------------
+Permutation results should be interpreted as robustness checks of the
+observed association.
+
+They do not restore missing biological replication, plate identifiers,
+randomization metadata, or experimental-unit structure.
+
+They do not establish mechanism.
+
+They do not establish toxicity or developmental safety.
+
+They do not establish a continuous molecular dose-response function.
+
+If the observed statistics remain extreme under permutation, this
+strengthens confidence that the concentration-associated pattern is
+not dependent on a particular asymptotic test approximation.
+

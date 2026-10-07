@@ -1,0 +1,3 @@
+N=343
+Muv_equals_Pseudovulva_gt_0=True
+mismatches=0

@@ -1,0 +1,80 @@
+STAGE 12A — FINAL PUBLICATION ARTIFACT GENERATION
+==================================================
+
+STATUS: PASS
+
+AUTHORITATIVE DATA
+------------------
+N = 343
+0 uM = 95
+50 uM = 116
+100 uM = 132
+
+PRIMARY OUTCOME
+---------------
+Muv occurrence
+
+0 uM: 86/95 = 0.905263
+50 uM: 71/116 = 0.612069
+100 uM: 31/132 = 0.234848
+
+CONDITIONAL SEVERITY
+--------------------
+Muv-positive only:
+H = 0.155390
+P = 0.925247
+
+No detectable exposure-associated difference in pseudovulva count
+among Muv-positive animals.
+
+GENERATED MAIN TABLES
+---------------------
+T1_PRIMARY_MUV_OUTCOME.csv
+T2_PAIRWISE_EFFECT_SIZES.csv
+T3A_PSEUDOVULVA_DISTRIBUTION.csv
+T3B_CONDITIONAL_SEVERITY.csv
+T3C_CONDITIONAL_SEVERITY_STATISTICS.csv
+
+GENERATED SUPPLEMENTARY TABLES
+------------------------------
+S1 complete pseudovulva distribution
+S2 threshold robustness
+S3 permutation robustness
+S4 experimental-unit/metadata audit
+
+GENERATED MAIN FIGURE CANDIDATES
+--------------------------------
+F1 experimental design
+F2 Muv prevalence
+F3 whole-animal pseudovulva distribution
+F4 conditional severity
+F5 pairwise risk differences
+F6 permutation robustness
+F7 threshold robustness
+
+GENERATED SUPPLEMENTARY FIGURES
+-------------------------------
+S1 detailed pseudovulva distribution
+S2 leave-one-out sensitivity
+S3 Bayesian posterior contrasts
+
+MANDATORY INTERPRETIVE BOUNDARIES
+---------------------------------
+- N=343 is authoritative.
+- N=105/n=35 is historical submitted-manuscript information only.
+- N=106 is excluded from manuscript evidence.
+- Logistic regression is not a manuscript analysis.
+- ROC/AUC is not a manuscript analysis.
+- No predictive-classifier claims.
+- No direct Ras/MAPK inhibition claims.
+- No toxicity/developmental-safety claims.
+- No severity plateau claim.
+- No progressive conditional severity claim.
+- 343 observations must not be called 343 biological replicates.
+- Applied TQ concentration is not measured internal worm dose.
+- No positive-control efficacy claim.
+
+NEXT
+----
+Audit these actual publication artifacts visually and numerically.
+Only after QC should they be copied into the Claude production package.

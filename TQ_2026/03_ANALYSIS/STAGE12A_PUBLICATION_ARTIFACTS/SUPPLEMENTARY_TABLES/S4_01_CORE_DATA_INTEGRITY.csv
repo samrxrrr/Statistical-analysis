@@ -1,0 +1,8 @@
+check,pass,value,interpretation
+N,True,343,Expected 343 animal-level observations.
+TQ_levels,True,"[0.0, 50.0, 100.0]","Expected exposure groups are 0, 50 and 100 uM."
+source_row_unique,True,343,Each extracted observation maps to a unique source row.
+Muv_binary_valid,True,"[0.0, 1.0]",Muv endpoint is binary.
+Pseudovulva_valid,True,"[0.0, 1.0, 2.0, 3.0, 4.0]",Pseudovulva count is restricted to observed integer categories 0-4.
+Muv_dependency,True,0,Muv is exactly defined by pseudovulva > 0 in the analytical data.
+missing_core,True,0,No missingness in core analytical fields.

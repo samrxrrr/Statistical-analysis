@@ -1,0 +1,27 @@
+TQ DATASET FORENSIC AUDIT
+================================================================================
+File: TQ_DATASET_FINAL.xlsx
+SHA256: 639b41a5d5e970430b1bb52a23630db24af4ec4e0808977f29811d8ebc40e7c2
+Size_bytes: 11657
+
+SHEET: Sheet1
+XML rows: 422
+Maximum column index: 6
+
+Row 1: ['TQ', '%', 'Pseudovulva', 'POTENTIAL WIDTH/LENGTH TOXICITY/DEVELOPMENTAL', '', '']
+Row 2: ['0.0', '0.0', '0.0', '', '', '']
+Row 3: ['0.0', '1.0', '2.0', '', '', '']
+Row 4: ['0.0', '1.0', '2.0', '', '', '']
+Row 5: ['0.0', '1.0', '2.0', '', '', '']
+Row 6: ['0.0', '1.0', '2.0', '', '', '']
+Row 7: ['0.0', '1.0', '2.0', '', '', '']
+Row 8: ['0.0', '1.0', '1.0', '', '', '']
+
+Column value summary:
+Column 1 | header=TQ | nonempty=343 | unique_count=3 | unique_preview=['0.0', '100.0', '50.0']
+Column 2 | header=% | nonempty=343 | unique_count=2 | unique_preview=['0.0', '1.0']
+Column 3 | header=Pseudovulva | nonempty=343 | unique_count=5 | unique_preview=['0.0', '1.0', '2.0', '3.0', '4.0']
+Column 4 | header=POTENTIAL WIDTH/LENGTH TOXICITY/DEVELOPMENTAL | nonempty=0 | unique_count=0 | unique_preview=[]
+Column 5 | header= | nonempty=0 | unique_count=0 | unique_preview=[]
+Column 6 | header= | nonempty=0 | unique_count=0 | unique_preview=[]
+

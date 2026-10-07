@@ -1,0 +1,25 @@
+Topic,Submitted_manuscript_claim,Disposition,Authoritative_status,Revision_instruction
+Sample size,Submitted manuscript reported 35 organisms per treatment / N=105,REPLACE,Current authoritative dataset contains 343 animal-level observations: 95/116/132.,Do not describe N=343 as biological replicates.
+Experimental unit,Individual worms scored,REFRAME,343 recorded animal-level observations; biological replicate structure cannot be reconstructed.,Use observation terminology.
+Muv prevalence,Submitted manuscript old prevalence values,REPLACE,0 uM 86/95; 50 uM 71/116; 100 uM 31/132.,Recalculate every percentage.
+Cochran-Armitage,Old submitted-manuscript statistic,REPLACE,New analysis: Z=-10.129018; P=4.107544e-24.,Use current authoritative analysis.
+Pearson chi-square,Old submitted-manuscript statistic,REPLACE,chi-square=103.139089; P=4.0145e-23; Cramer's V=0.548359.,Complementary global test.
+Pseudovulva global test,Old submitted-manuscript statistic,REPLACE,Kruskal-Wallis H=92.489158; P=8.245834e-21; epsilon2=0.266145.,Secondary endpoint.
+Pairwise treatment effects,Old submitted-manuscript RR/ARR/NNT framework,REPLACE,Use Stage 5 RD/RR/OR and Fisher-Holm results.,No NNT required.
+Logistic regression,Submitted manuscript included binary logistic regression,DELETE,Stage 7 audit found regression redundant and unsuitable as predictive modeling.,Remove regression framework.
+Ordinal logistic regression,Submitted manuscript included ordinal logistic regression,DELETE,Not needed in final inferential framework.,Remove.
+ROC/AUC,Submitted manuscript included ROC/AUC,DELETE,No predictive classifier is justified.,Remove completely.
+Bootstrap,Submitted manuscript reported bootstrap analysis,DELETE,Not required in final analysis.,Remove.
+Jackknife,Submitted manuscript reported jackknife analysis,DELETE,Not required in final analysis.,Remove.
+Severity plateau,Submitted manuscript described a partial plateau,DELETE,Current conditional severity analysis is null.,Do not use plateau terminology.
+Conditional severity,Not adequately isolated in submitted analysis,ADD,Muv-positive only: KW H=0.155390; P=0.925247.,Exploratory secondary analysis.
+Toxicity,Submitted manuscript stated no visible toxicity,REFRAME,Authoritative toxicity/developmental column is empty.,Do not claim absence of toxicity.
+Developmental arrest,Submitted manuscript stated no developmental arrest,REFRAME,No independent developmental endpoint in authoritative dataset.,State not independently assessed.
+Exposure framing,TQ concentration / treatment,CLARIFY,Surface-applied exposure; internal concentration was not measured.,Use applied concentration/exposure.
+Ras/MAPK mechanism,Submitted manuscript used suppression/mechanistic interpretation,REFRAME,No direct RAS/ERK activity or pathway reporter assay.,Use Ras/MAPK-associated phenotype.
+Positive control,No canonical Ras/MAPK inhibitor control,ADD LIMITATION,No U0126/PD98059-type comparator was included.,Explicit limitation.
+Replication,Submitted manuscript described the experimental cohort,REFRAME,Plate/batch/cohort/replicate metadata unavailable in authoritative dataset.,Do not infer biological replication.
+Permutation robustness,Not in submitted manuscript,ADD,"100,000 random-label permutations support global/effect-size robustness.",Sensitivity analysis.
+Threshold >=2,Not in submitted manuscript,ADD SUPPLEMENT,>=2 retains robust pairwise effects.,Sensitivity analysis.
+Strict-order permutation,Not in submitted manuscript,DO NOT CLAIM SIGNIFICANCE,Ordering-alone empirical probability = 0.161218.,Do not call significant.
+Legacy N=106,NOT PRESENT IN SUBMITTED MANUSCRIPT,EXCLUDE,Legacy/internal artifact only.,Do not include in manuscript forensic matrix.

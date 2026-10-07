@@ -1,0 +1,11 @@
+ID,Title,Placement,Contents
+F1,Experimental design and exposure workflow,MAIN,let-60(gf) model -> TQ 0/50/100 uM -> surface application -> 120 h -> Muv scoring
+F2,Muv prevalence across TQ exposure groups,MAIN,Group prevalence with exact 95% confidence intervals
+F3,Whole-animal pseudovulva count distribution,MAIN,Count distribution by exposure group
+F4,Conditional pseudovulva severity among Muv-positive animals,MAIN,Muv-positive-only distributions; no dose-associated severity difference
+F5,Pairwise risk differences in Muv occurrence,MAIN,"RD and 95% CI for 50 vs 0, 100 vs 0, 100 vs 50"
+F6,Permutation robustness of the primary association,MAIN,Observed statistic versus random-label null distribution
+F7,Threshold robustness of phenotype occurrence,MAIN,>=1 and >=2 thresholds; sparse >=3/>=4 not emphasized
+S1,Detailed pseudovulva distribution,SUPPLEMENT,Exact count distribution
+S2,Leave-one-out effect-size sensitivity,SUPPLEMENT,Primary RD ranges under LOO
+S3,Bayesian posterior treatment contrasts,SUPPLEMENT,Posterior RD distributions

@@ -1,0 +1,4 @@
+comparison,p_matches_stage4,current_p,stage4_reference_p
+50 vs 0 uM,True,5.441088403486237e-05,5.441088e-05
+100 vs 0 uM,True,2.839041397834298e-21,2.839041e-21
+100 vs 50 uM,True,2.8634797543633703e-09,2.86348e-09

@@ -1,0 +1,18 @@
+                 Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:             Muv_binary   No. Observations:                  343
+Model:                            GLM   Df Residuals:                      340
+Model Family:                Binomial   Df Model:                            2
+Link Function:                  Logit   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -179.18
+Date:                Mon, 05 Oct 2026   Deviance:                       358.37
+Time:                        13:10:09   Pearson chi2:                     343.
+No. Iterations:                     5   Pseudo R-squ. (CS):             0.2827
+Covariance Type:            nonrobust                                         
+==========================================================================================================
+                                             coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------------------------------
+Intercept                                  2.2571      0.350      6.443      0.000       1.570       2.944
+C(TQ, Treatment(reference=0))[T.50.0]     -1.8011      0.399     -4.516      0.000      -2.583      -1.019
+C(TQ, Treatment(reference=0))[T.100.0]    -3.4383      0.406     -8.467      0.000      -4.234      -2.642
+==========================================================================================================

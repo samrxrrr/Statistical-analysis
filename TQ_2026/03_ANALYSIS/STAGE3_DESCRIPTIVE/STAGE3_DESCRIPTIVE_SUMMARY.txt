@@ -1,0 +1,34 @@
+===== STAGE 3 — DESCRIPTIVE STATISTICS =====
+Generated: 2026-10-05T12:58:40
+Input: /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/NEW TQ/03_ANALYSIS/TQ_NEW_RAW_EXTRACT.csv
+Input SHA256: 37e64396bd66103ea54a6ba875c1d686662ecd6e2a07295b389b12ee83136062
+
+MUV PREVALENCE
+ TQ_uM   N  Muv_positive  Muv_negative  Muv_prevalence  Muv_percent  Wilson_95CI_low  Wilson_95CI_high  Wilson_95CI_low_percent  Wilson_95CI_high_percent
+   0.0  95            86             9        0.905263    90.526316         0.829670          0.949356                82.966956                 94.935577
+  50.0 116            71            45        0.612069    61.206897         0.521161          0.695792                52.116145                 69.579185
+ 100.0 132            31           101        0.234848    23.484848         0.170668          0.314025                17.066821                 31.402520
+
+EFFECTS VS CONTROL
+ Comparison  Treatment_N  Treatment_Muv  Control_N  Control_Muv  Treatment_prevalence  Control_prevalence  Risk_difference  RD_95CI_low  RD_95CI_high  Relative_risk  RR_95CI_low  RR_95CI_high  Odds_ratio  OR_95CI_low  OR_95CI_high
+ 50 vs 0 uM          116             71         95           86              0.612069            0.905263        -0.293194    -0.399643     -0.186745       0.676123     0.576838      0.792496    0.165116     0.075565      0.360794
+100 vs 0 uM          132             31         95           86              0.234848            0.905263        -0.670415    -0.763676     -0.577153       0.259426     0.189378      0.355382    0.032121     0.014492      0.071194
+
+PSEUDOVULVA DESCRIPTIVES
+ TQ_uM   N     Mean       SD  Median  Q1  Q3  IQR  Minimum  Maximum
+   0.0  95 1.715789 0.709557     2.0 2.0 2.0  0.0      0.0      3.0
+  50.0 116 1.181034 0.992135     2.0 0.0 2.0  2.0      0.0      4.0
+ 100.0 132 0.446970 0.849916     0.0 0.0 0.0  0.0      0.0      3.0
+
+PSEUDOVULVA DISTRIBUTION
+Pseudovulva    0   1   2  3  4
+TQ_uM                         
+0.0            9  14  67  5  0
+50.0          45   7  63  0  1
+100.0        101   6  22  3  0
+
+PRELIMINARY PAIRWISE MANN-WHITNEY RESULTS
+  Comparison  N_group1  N_group2  Median_group1  Median_group2  Mann_Whitney_U  P_unadjusted
+  0 vs 50 uM        95       116            2.0            2.0          7051.0  5.441088e-05
+ 0 vs 100 uM        95       132            2.0            0.0         10469.0  2.839041e-21
+50 vs 100 uM       116       132            2.0            0.0         10566.5  2.863480e-09

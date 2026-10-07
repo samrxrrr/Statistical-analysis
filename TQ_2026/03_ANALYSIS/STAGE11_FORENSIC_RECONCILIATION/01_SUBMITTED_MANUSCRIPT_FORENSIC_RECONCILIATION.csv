@@ -1,0 +1,27 @@
+Topic,Submitted_manuscript_status,Disposition,Authoritative_current_status,Required_action
+Sample size,"Submitted manuscript: n=35/group, N=105",REPLACE,Authoritative dataset: N=343; 95/116/132,Current manuscript must use authoritative dataset
+N=106,Not a submitted-manuscript sample-size claim,EXCLUDE,N=106 does not belong in manuscript forensic reconciliation,Legacy/internal analysis only; do not mention in manuscript
+Control Muv,29/35 = 82.9%,REPLACE,86/95 = 90.5263%,Replace all old counts and percentages
+50 uM Muv,15/35 = 42.9%,REPLACE,71/116 = 61.2069%,Replace all old counts and percentages
+100 uM Muv,7/35 = 20.0%,REPLACE,31/132 = 23.4848%,Replace all old counts and percentages
+Cochran-Armitage,Z=-5.261; old P,REPLACE,Z=-10.129018; P=4.107544e-24,Current authoritative analysis
+Pearson chi-square,chi-square=28.366,REPLACE,chi-square=103.139089; P=4.0145e-23; V=0.548359,Current authoritative analysis
+Whole-animal severity,H=23.750; epsilon2=0.213,REPLACE,H=92.489158; P=8.245834e-21; epsilon2=0.266145,Secondary whole-animal analysis
+Conditional severity,Not properly isolated,ADD,H=0.155390; P=0.925247 among Muv-positive animals,Exploratory severity analysis
+Binary logistic regression,OR=0.228 per 50 uM,DELETE,Removed from final inferential framework,Do not retain OR=0.228
+Ordinal logistic regression,OR=0.283,DELETE,Removed,Do not retain
+ROC/AUC,AUC=0.780,DELETE,Removed,Do not retain ROC/AUC
+Hosmer-Lemeshow,P=0.405,DELETE,Removed with predictive model,Do not retain
+Bootstrap,Reported as model stability,DELETE,Removed,Do not retain
+Jackknife,105 leave-one-out refits,DELETE,Removed as manuscript-level model validation,Do not retain
+NNT,NNT=1.6,DELETE,Not needed for this animal-level phenotypic experiment,Do not retain
+Severity plateau,Partial plateau discussed,DELETE,Unsupported; conditional severity P=0.925247,Never use plateau wording
+Toxicity,Without visible toxicity,REFRAME,Not independently assessed in authoritative dataset,Do not claim absence of toxicity
+Developmental arrest,Without visible developmental arrest,REFRAME,No independent developmental endpoint,Do not claim developmental safety
+Mechanism,Suppression of Ras/MAPK output interpreted mechanistically,REFRAME,Phenotypic reduction in Ras/MAPK-associated developmental output,No direct molecular pathway inhibition
+Exposure,TQ concentrations,REFRAME,Surface-applied treatment concentrations; internal dose not measured,Use applied-exposure terminology
+Positive control,Not reported,ADD LIMITATION,No canonical Ras/MAPK inhibitor positive control,Explicit limitation
+Replication,Dataset presented as 35/group,REFRAME,343 animal-level observations; experimental-unit metadata unavailable,Do not call N=343 biological replicates
+Permutation robustness,Not in submitted manuscript,ADD,"100,000-label permutations support global/effect-size robustness",Sensitivity analysis
+Threshold robustness,Not in submitted manuscript,ADD,>=2 threshold remains robust,Supplementary sensitivity analysis
+Strict ordering permutation,Not in submitted manuscript,DO NOT CLAIM,P=0.161218,Ordering alone is not permutation-significant

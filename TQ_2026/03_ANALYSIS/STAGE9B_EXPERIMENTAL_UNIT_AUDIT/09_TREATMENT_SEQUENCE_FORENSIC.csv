@@ -1,0 +1,2 @@
+N,number_of_TQ_transitions,number_of_TQ_blocks,treatment_groups_interleaved,randomization_demonstrable_from_dataset,reason
+343,2,3,False,False,Source-row ordering alone cannot establish random allocation.

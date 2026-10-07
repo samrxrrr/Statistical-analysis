@@ -1,0 +1,18 @@
+ID,Location,Purpose,Files
+T1,Main,Primary Muv outcome,T1_PRIMARY_MUV_OUTCOME.csv
+T2,Main,Pairwise Muv effect sizes,T2_PAIRWISE_EFFECT_SIZES.csv
+T3,Main,Pseudovulva distribution + conditional severity,T3A/T3B/T3C
+S1,Supplementary,Complete pseudovulva distribution,S1_COMPLETE_PSEUDOVULVA_DISTRIBUTION.csv
+S2,Supplementary,Threshold robustness,S2A/S2B
+S3,Supplementary,Permutation robustness,S3_*
+S4,Supplementary,Experimental-unit metadata audit,S4_*
+F1,Main candidate,Experimental design,F1_EXPERIMENTAL_DESIGN
+F2,Main candidate,Muv prevalence,F2_MUV_PREVALENCE
+F3,Main candidate,Whole-animal pseudovulva distribution,F3_WHOLE_ANIMAL_PSEUDOVULVA_DISTRIBUTION
+F4,Main candidate,Conditional severity,F4_CONDITIONAL_SEVERITY
+F5,Main candidate,Pairwise risk differences,F5_PAIRWISE_RISK_DIFFERENCES
+F6,Main candidate,Permutation robustness,F6_PERMUTATION_ROBUSTNESS
+F7,Main candidate,Threshold robustness,F7_THRESHOLD_ROBUSTNESS
+S1,Supplementary figure,Detailed pseudovulva distribution,S1_DETAILED_PSEUDOVULVA_DISTRIBUTION
+S2,Supplementary figure,Leave-one-out sensitivity,S2_LEAVE_ONE_OUT_EFFECT_SENSITIVITY
+S3,Supplementary figure,Bayesian posterior contrasts,S3_BAYESIAN_POSTERIOR_CONTRASTS

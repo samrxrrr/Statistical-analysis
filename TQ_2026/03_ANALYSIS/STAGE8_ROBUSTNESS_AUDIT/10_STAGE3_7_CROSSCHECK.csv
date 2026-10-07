@@ -1,0 +1,11 @@
+metric,expected_frozen,stage8_recomputed,PASS,status
+N,343,343,True,MATCH
+Muv_0,86,86,True,MATCH
+Muv_50,71,71,True,MATCH
+Muv_100,31,31,True,MATCH
+Global_Muv_Permutation,New Stage 8 robustness analysis,9.99990000099999e-06,True,NEW_ROBUSTNESS_ANALYSIS
+Pairwise_Fisher,Stage 4 pairwise direction/significance,All three pairwise Fisher tests significant after Holm correction,True,CROSSCHECK
+Observed_Muv_Monotonicity,0 > 50 > 100 prevalence,True,True,CROSSCHECK
+Conditional_Severity_KW,NEW conditional analysis among Muv-positive animals; NOT expected to equal Stage 4/6 whole-animal KW.,H and P are reported in conditional severity outputs,True,NEW_ANALYSIS
+Conditional_Severity_Pairwise,No pairwise concentration-associated difference among Muv-positive animals,No Holm-adjusted pairwise P < 0.05,True,NEW_ANALYSIS
+Leave_One_Out_Trend,Primary trend direction/significance robust,all_negative_Z=True; all_p_lt_0.05=True,True,NEW_ROBUSTNESS_ANALYSIS

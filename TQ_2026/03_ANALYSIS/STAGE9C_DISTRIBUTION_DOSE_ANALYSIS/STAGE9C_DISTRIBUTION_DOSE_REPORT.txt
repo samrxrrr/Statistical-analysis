@@ -1,0 +1,92 @@
+STAGE 9C — DISTRIBUTION / DOSE-RESPONSE SHAPE ANALYSIS
+==========================================================
+
+DATA
+----
+N = 343
+TQ = 0, 50, 100 uM
+
+PRIMARY MUV PREVALENCE
+----------------------
+0 uM   = 0.905263158
+50 uM  = 0.612068966
+100 uM = 0.234848485
+
+Strict observed ordering:
+True
+
+WHOLE-ANIMAL PSEUDOVULVA DISTRIBUTION
+-------------------------------------
+Kruskal-Wallis H = 92.4891576739
+P = 8.24583410572e-21
+
+Spearman dose/pseudovulva:
+rho = -0.519631801567
+P = 4.08312130115e-25
+
+THRESHOLD ANALYSIS
+------------------
+Thresholds evaluated:
+>=1 pseudovulva
+>=2 pseudovulvae
+>=3 pseudovulvae
+
+The >=1 threshold is identical to the primary Muv endpoint because
+Muv_binary == (Pseudovulva > 0) for all 343 observations.
+
+The >=2 and >=3 thresholds are exploratory severity-threshold
+sensitivity analyses.
+
+DOSE SHAPE
+----------
+Observed adjacent reductions:
+0 -> 50 uM:
+-0.293194192
+
+50 -> 100 uM:
+-0.377220481
+
+These are descriptive comparisons.
+
+No continuous molecular dose-response model is claimed.
+
+THREE-POINT GEOMETRY
+--------------------
+A descriptive straight-line fit across the three observed group
+proportions is provided only as a geometric summary.
+
+It must NOT be interpreted as proof of a continuous linear biological
+dose-response relationship.
+
+STOCHASTIC DISTRIBUTION
+-----------------------
+Pairwise probability-of-superiority estimates are provided to
+describe the full pseudovulva distribution.
+
+The distributional analysis is complementary to the primary binary
+endpoint and should not replace it.
+
+BIOLOGICAL INTERPRETATION
+-------------------------
+The key question is whether TQ changes:
+
+1. phenotype occurrence; and/or
+2. phenotype count conditional on occurrence.
+
+The Stage 9A conditional analysis showed no detectable concentration
+effect on pseudovulva count among Muv-positive animals.
+
+Stage 9C therefore tests whether the whole-animal distributional
+signal is driven primarily by the large shift in zero versus positive
+phenotypes.
+
+The final interpretation must be based on the actual threshold and
+distribution results rather than assumed in advance.
+
+PROHIBITED CLAIMS
+-----------------
+- direct Ras/MAPK inhibition
+- continuous molecular dose-response
+- toxicity absence
+- developmental safety
+- biological replication inferred from N=343

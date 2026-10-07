@@ -1,0 +1,11 @@
+Figure,Proposed_title,Placement,Contents,Purpose
+Figure 1,Experimental design and TQ exposure workflow,MAIN,"Model, TQ concentrations, surface application, scoring, Muv definition",Study design
+Figure 2,Muv prevalence across TQ exposure groups,MAIN,Prevalence with exact 95% CIs,Primary endpoint
+Figure 3,Pseudovulva count distribution across exposure groups,MAIN,Full count distribution,Secondary endpoint
+Figure 4,Conditional pseudovulva severity among Muv-positive animals,MAIN,Muv-positive-only distributions,Addresses severity criticism
+Figure 5,Pairwise treatment effects on Muv occurrence,MAIN,RD with 95% CI,Effect-size interpretation
+Figure 6,Permutation robustness,MAIN,Primary statistic/effect against permutation null,Robustness
+Figure 7,Threshold robustness,MAIN,>=1 and >=2 phenotype thresholds,Sensitivity
+Figure S1,Complete pseudovulva distribution,SUPPLEMENT,Detailed distribution,Transparency
+Figure S2,Leave-one-out effect-size sensitivity,SUPPLEMENT,LOO RD ranges,Influence robustness
+Figure S3,Bayesian posterior treatment contrasts,SUPPLEMENT,Posterior contrasts,Sensitivity

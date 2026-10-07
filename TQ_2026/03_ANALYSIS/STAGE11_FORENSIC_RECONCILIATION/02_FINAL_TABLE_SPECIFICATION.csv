@@ -1,0 +1,8 @@
+ID,Title,Placement,Contents,Purpose
+T1,Primary Muv phenotype outcome by TQ exposure,MAIN,"0, 50, 100 uM; N; Muv+; Muv-; prevalence; exact 95% CI",Primary endpoint
+T2,Pairwise effect sizes for Muv occurrence,MAIN,RD + Newcombe-Wilson CI; RR + CI; OR; Fisher exact P; Holm-adjusted P,Primary inferential effect sizes
+T3,Pseudovulva distribution and conditional severity,MAIN,Whole-animal distribution; Muv-positive-only severity; conditional KW,Secondary endpoint and reviewer issue
+S1,Complete pseudovulva count distribution,SUPPLEMENT,"Counts and percentages for 0,1,2,3,4 pseudovulvae",Distributional transparency
+S2,Threshold robustness analysis,SUPPLEMENT,">=1, >=2, >=3, >=4 prevalence and pairwise effects",Sensitivity
+S3,Permutation robustness analysis,SUPPLEMENT,"Observed statistics, 100000 permutations, extreme counts, empirical P",Distribution-free sensitivity
+S4,Experimental-unit and metadata audit,SUPPLEMENT,"Available/unavailable plate, batch, cohort, replicate, ID metadata",Transparency

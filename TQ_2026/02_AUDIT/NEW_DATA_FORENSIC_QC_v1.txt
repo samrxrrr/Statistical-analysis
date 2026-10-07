@@ -1,0 +1,45 @@
+===== NEW DATA FORENSIC QC v1 =====
+Generated: 2026-10-05T12:53:56
+Source: TQ DataSet; n=3, qualified for grading.xlsx
+Source SHA256: 639b41a5d5e970430b1bb52a23630db24af4ec4e0808977f29811d8ebc40e7c2
+Extract: 03_ANALYSIS/TQ_NEW_RAW_EXTRACT.csv
+Extract SHA256: 37e64396bd66103ea54a6ba875c1d686662ecd6e2a07295b389b12ee83136062
+
+Observations: 343
+TQ groups: [0.0, 50.0, 100.0]
+TQ counts: {0.0: 95, 50.0: 116, 100.0: 132}
+
+MUV CONSISTENCY CHECK
+Rows where Muv_binary == (Pseudovulva > 0): 343/343
+Rows inconsistent: 0
+Inconsistent source rows: []
+
+VALUE/RANGE CHECK
+Unique TQ: [0.0, 50.0, 100.0]
+Unique Muv_binary: [0.0, 1.0]
+Unique Pseudovulva: [0.0, 1.0, 2.0, 3.0, 4.0]
+Non-integer Pseudovulva values: 0
+Negative Pseudovulva values: 0
+Negative TQ values: 0
+Muv values outside 0/1: 0
+
+DUPLICATE CHECK
+Exact duplicate analytical rows (TQ,Muv_binary,Pseudovulva), duplicated records: 342
+Exact duplicate full extracted rows, duplicated records: 0
+
+SOURCE ROW CHECK
+Min source row: 2
+Max source row: 344
+Unique source rows: 343
+Duplicate source rows: 0
+
+TOXICITY/DEVELOPMENTAL COLUMN AUDIT
+Worksheet non-empty values in column D: 0
+Worksheet non-empty values in columns E-F are not treated as analytical endpoints.
+
+EXPERIMENTAL-UNIT INFORMATION
+The extracted analytical dataset contains no plate, batch, replicate, cohort, worm ID, run ID, or developmental-stage variable.
+Experimental replication cannot be inferred from these three analytical columns alone.
+
+QC STATUS
+PASS if consistency, ranges, source-row uniqueness, and structural checks show no violations. Duplicate observations are not automatically errors because repeated phenotype values can legitimately occur across animals.

@@ -1,0 +1,37 @@
+EXPERIMENTAL-UNIT FORENSIC AUDIT
+
+Authoritative analytical file:
+03_ANALYSIS/TQ_NEW_RAW_EXTRACT.csv
+
+Available analytical unit:
+- Individual phenotype observation represented by one source-row record.
+
+Available variables:
+- source_row
+- TQ
+- Muv_binary
+- Pseudovulva
+
+Not available in the analytical dataset:
+- plate ID
+- assay/run ID
+- biological replicate ID
+- technical replicate ID
+- cohort ID
+- worm ID
+- developmental-stage identifier
+- randomization identifier
+- blinding identifier
+- plate quadrant identifier
+
+Therefore:
+1. The dataset supports animal/observation-level descriptive and
+   phenotypic comparisons.
+2. It does NOT establish independent biological replicate structure.
+3. Statistical results must not be described as replicated across
+   independent experiments unless such metadata are independently
+   documented.
+4. n=343 is the number of phenotype observations, not the number of
+   biological experiments or independent cohorts.
+5. The absence of replicate metadata is a study-design limitation,
+   not evidence that replication occurred.

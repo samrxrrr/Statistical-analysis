@@ -1,0 +1,13 @@
+claim,supported_by_dataset,basis
+Animal-level observation count,True,343 source observations are present in the analytical extract.
+Treatment-group sample sizes,True,"95, 116 and 132 observations at 0, 50 and 100 uM."
+Phenotype occurrence,True,Muv is directly represented as a binary observation.
+Pseudovulva count,True,Observed integer count from 0 to 4.
+Source-row uniqueness,True,Each analytical observation has a unique source row.
+Biological replicate count,False,No replicate identifier is present.
+Plate-level clustering,False,No plate identifier is present.
+Batch effect,False,No batch identifier is present.
+Technical replicate structure,False,No technical replicate identifier is present.
+Randomization,False,Random allocation cannot be established from the dataset.
+Independence of all observations,False,Cannot be verified because clustering metadata are absent.
+Generalizability beyond this observed dataset,False,External generalizability requires independent biological replication.

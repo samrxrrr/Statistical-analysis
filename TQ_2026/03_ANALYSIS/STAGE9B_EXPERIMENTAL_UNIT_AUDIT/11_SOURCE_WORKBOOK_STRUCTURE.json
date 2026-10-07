@@ -1,0 +1,17 @@
+{
+  "workbook_present": true,
+  "sheetnames": [
+    "Sheet1"
+  ],
+  "first_sheet": "Sheet1",
+  "max_row": 452,
+  "max_column": 6,
+  "headers": [
+    "TQ",
+    "%",
+    "Pseudovulva",
+    "POTENTIAL WIDTH/LENGTH TOXICITY/DEVELOPMENTAL",
+    null,
+    null
+  ]
+}

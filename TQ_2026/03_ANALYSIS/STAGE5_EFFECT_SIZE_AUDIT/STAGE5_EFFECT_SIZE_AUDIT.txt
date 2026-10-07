@@ -1,0 +1,32 @@
+STAGE 5 — BINARY EFFECT-SIZE AND CI AUDIT
+============================================================
+Input: /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/NEW TQ/03_ANALYSIS/TQ_NEW_RAW_EXTRACT.csv
+Observations: 343
+
+DIRECTION CONVENTION
+RR and OR are treatment/comparator.
+Risk difference is treatment prevalence minus comparator prevalence.
+Therefore values below 1 for RR/OR indicate lower Muv prevalence in treatment.
+
+GROUP COUNTS
+0 uM: n=95, Muv+= 86, prevalence=0.905263158
+50 uM: n=116, Muv+= 71, prevalence=0.612068966
+100 uM: n=132, Muv+= 31, prevalence=0.234848485
+
+PAIRWISE EFFECTS
+50 vs 0 uM: RD=-0.293194192 (95% CI -0.394230496, -0.180393868); RR=0.676122694 (95% CI 0.576839549, 0.792494029); OR=0.165116279 (95% CI 0.075565946, 0.360789314); Fisher p=6.6854598665e-07; Holm p=6.6854598665e-07
+100 vs 0 uM: RD=-0.670414673 (95% CI -0.748281651, -0.560946216); RR=0.259425652 (95% CI 0.189379243, 0.355380389); OR=0.032120654 (95% CI 0.014492106, 0.071192996); Fisher p=1.89812394848e-25; Holm p=5.69437184543e-25
+100 vs 50 uM: RD=-0.377220481 (95% CI -0.482712801, -0.256667057); RR=0.383696116 (95% CI 0.273021186, 0.539235476); OR=0.194533538 (95% CI 0.112346121, 0.336845607); Fisher p=1.78207590501e-09; Holm p=3.56415181003e-09
+
+STAGE 3 CROSS-CHECK
+50 vs 0 uM: RR_match=True; OR_match=True
+100 vs 0 uM: RR_match=True; OR_match=True
+
+INTERPRETATION GUARDRAILS
+- Effect estimates describe phenotypic association, not direct Ras/MAPK inhibition.
+- TQ concentrations are applied-exposure concentrations, not measured internal doses.
+- n refers to individual animal observations in the available dataset; no plate/batch/replicate identifiers are available.
+- Do not describe these animals as independent biological replicates.
+- Muv_binary is deterministically defined by Pseudovulva > 0 and therefore is not an independent endpoint.
+- No predictive/ROC analysis is included.
+- No toxicity/developmental safety inference is made from this dataset because the toxicity/developmental field is empty.

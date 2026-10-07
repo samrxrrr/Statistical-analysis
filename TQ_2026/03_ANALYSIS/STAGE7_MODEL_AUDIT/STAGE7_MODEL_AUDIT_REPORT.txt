@@ -1,0 +1,33 @@
+STAGE 7 — STATISTICAL MODEL AUDIT
+============================================================
+
+PRIMARY QUESTION
+Does a simple inferential logistic model add defensible information beyond the already-established dose-response trend and effect sizes?
+
+MODEL SPECIFICATION
+Continuous model: Muv_binary ~ TQ/50, binomial-logit.
+Categorical model: Muv_binary ~ categorical TQ, reference = 0 uM.
+
+CONTINUOUS MODEL
+OR per 50 uM increase = 0.182944174 (95% CI 0.126554695, 0.264459339), p=1.65275167712e-19.
+
+MODEL COMPARISON
+Categorical-vs-continuous LRT: chi-square=0.087100744, df=1, p=0.767895832082.
+This test evaluates whether the three dose levels require additional nonlinearity beyond a simple log-odds dose trend.
+
+CRITICAL FORENSIC LIMITATIONS
+1. The dataset contains no plate, batch, assay-run, replicate, cohort, or worm-ID structure suitable for cluster-robust inference.
+2. Therefore the logistic model treats the 343 animal observations as independent conditional observations; this independence assumption cannot be verified from the available dataset.
+3. The model is inferential/associational only and must not be described as a predictive classifier.
+4. ROC/AUC analysis is not justified as a primary analysis and remains excluded.
+5. No train/test split, cross-validation, or machine-learning interpretation is appropriate for this manuscript.
+6. Because Muv_binary is deterministically derived from pseudovulva count, regression of Muv does not provide an independent mechanistic endpoint.
+
+PROVISIONAL MANUSCRIPT DECISION: No evidence that the categorical model adds fit beyond the simple dose trend. Regression is therefore redundant with the primary Cochran-Armitage trend analysis and treatment-vs-control effect sizes. Recommended main-text approach: omit logistic regression.
+
+FROZEN LANGUAGE GUARDRAILS
+- Do not use 'predictive model', 'classifier', 'prediction', ROC, AUC, sensitivity, specificity, or confusion-matrix language.
+- Do not interpret an odds ratio as evidence of pathway inhibition.
+- Do not call the animal observations biological replicates.
+- Do not infer toxicity, developmental safety, or molecular mechanism.
+- If regression is omitted, retain Cochran-Armitage trend test as the primary concentration-ordering analysis.

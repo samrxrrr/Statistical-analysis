@@ -1,0 +1,8 @@
+Table,Proposed_title,Placement,Contents,Purpose,Source_stage
+Table 1,Primary Muv outcome by TQ exposure,MAIN,"Dose, N, Muv-positive, Muv-negative, prevalence, exact 95% CI",Primary endpoint,Stage 3/9A
+Table 2,Pairwise effect sizes for Muv occurrence,MAIN,"RD with Newcombe-Wilson CI, RR, OR, Fisher P, Holm-adjusted P",Primary inference,Stage 4/5
+Table 3,Pseudovulva distribution and conditional severity,MAIN,Whole-animal distribution plus Muv-positive conditional severity,Secondary endpoint,Stage 6/9C
+Table S1,Complete pseudovulva count distribution,SUPPLEMENT,Counts and percentages for 0/1/2/3/4,Transparency,Stage 3/9C
+Table S2,Threshold robustness,SUPPLEMENT,">=1, >=2, >=3, >=4",Sensitivity,Stage 9D
+Table S3,Permutation robustness,SUPPLEMENT,"Observed statistics, extreme counts, empirical P",Distribution-free sensitivity,Stage 9E
+Table S4,Experimental-unit and metadata audit,SUPPLEMENT,Available/unavailable metadata,Transparency,Stage 9B

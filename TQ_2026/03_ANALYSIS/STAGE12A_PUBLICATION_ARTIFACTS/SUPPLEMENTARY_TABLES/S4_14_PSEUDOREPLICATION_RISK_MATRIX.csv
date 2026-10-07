@@ -1,0 +1,8 @@
+issue,detectable_from_current_data,risk_status,reason
+Multiple animals counted within an experiment,False,UNRESOLVED,No plate/cohort/experiment identifier.
+Technical repeats,False,UNRESOLVED,No technical-replicate identifier.
+Biological replicates,False,UNRESOLVED,No independent biological replicate identifier.
+Duplicate analytical rows,True,NOT EVIDENCE OF DUPLICATE ANIMALS,"Repeated phenotype combinations occur, but source rows are unique."
+Plate clustering,False,CANNOT ASSESS,Plate identifiers absent.
+Observer effect,False,CANNOT ASSESS,Observer identifier absent.
+Developmental-stage heterogeneity,False,CANNOT ASSESS FROM DATASET,No developmental-stage field.

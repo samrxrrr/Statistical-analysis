@@ -1,0 +1,47 @@
+===== STAGE 4 — FORMAL INFERENTIAL ANALYSIS =====
+Generated: 2026-10-05T13:00:31
+Input: /mnt/c/Users/ASUS/OneDrive/Desktop/Sameer/NEW TQ/03_ANALYSIS/TQ_NEW_RAW_EXTRACT.csv
+Input SHA256: 37e64396bd66103ea54a6ba875c1d686662ecd6e2a07295b389b12ee83136062
+
+PRIMARY BINARY MUV ENDPOINT
+Cochran–Armitage trend test
+ N_total  Muv_total          Z  Chi_square_1df      P_value
+     343        188 -10.129018      102.597002 4.107544e-24
+
+SECONDARY OMNIBUS BINARY TEST
+Pearson chi-square test
+ Chi_square  df      P_value  Cramers_V
+ 103.139089   2 4.014500e-23   0.548359
+
+PAIRWISE BINARY COMPARISONS
+  Comparison  N_group1  Muv_group1  N_group2  Muv_group2  Fisher_OR  P_unadjusted       P_Holm  Significant_Holm_0.05
+  0 vs 50 uM        95          86       116          71   6.056338  6.685460e-07 6.685460e-07                   True
+ 0 vs 100 uM        95          86       132          31  31.132616  1.898124e-25 5.694372e-25                   True
+50 vs 100 uM       116          71       132          31   5.140502  1.782076e-09 3.564152e-09                   True
+
+SECONDARY PSEUDOVULVA ENDPOINT
+Kruskal–Wallis test
+ Kruskal_Wallis_H  df      P_value  Epsilon_squared
+        92.489158   2 8.245834e-21         0.266145
+
+PAIRWISE PSEUDOVULVA COMPARISONS
+  Comparison  N_group1  N_group2  Median_group1  Median_group2  Mann_Whitney_U  P_unadjusted       P_Holm  Significant_Holm_0.05
+  0 vs 50 uM        95       116            2.0            2.0          7051.0  5.441088e-05 5.441088e-05                   True
+ 0 vs 100 uM        95       132            2.0            0.0         10469.0  2.839041e-21 8.517124e-21                   True
+50 vs 100 uM       116       132            2.0            0.0         10566.5  2.863480e-09 5.726960e-09                   True
+
+SPEARMAN ASSOCIATION: DOSE vs MUV
+ Spearman_rho      P_value
+    -0.548177 2.691143e-28
+
+SPEARMAN ASSOCIATION: DOSE vs PSEUDOVULVA
+ Spearman_rho      P_value
+    -0.519632 4.083121e-25
+
+INTERPRETATION GUARDRAILS
+- These analyses establish statistical association with applied TQ concentration.
+- They do not establish direct inhibition of Ras/MAPK signaling.
+- They do not establish molecular mechanism.
+- They do not establish toxicity or developmental safety because no independent toxicity/developmental endpoint is populated.
+- No predictive-model or ROC interpretation is used.
+- The dataset does not encode plate, batch, biological replicate, cohort, worm ID, or run ID; therefore independent experimental replication cannot be modeled from this dataset.

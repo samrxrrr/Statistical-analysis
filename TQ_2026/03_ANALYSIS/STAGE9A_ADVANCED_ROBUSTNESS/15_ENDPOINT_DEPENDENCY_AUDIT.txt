@@ -1,0 +1,18 @@
+ENDPOINT DEPENDENCY AUDIT
+=========================
+
+N = 343
+Muv == (Pseudovulva > 0): True
+Mismatches: 0
+
+Interpretation:
+Muv occurrence is mathematically determined by whether the
+pseudovulva count is zero or greater than zero.
+
+Therefore whole-animal pseudovulva analysis is a composite
+endpoint containing both phenotype occurrence and the count
+among affected animals.
+
+Conditional analysis restricted to Muv-positive animals is
+therefore the appropriate exploratory representation when the
+question is severity conditional on phenotype occurrence.

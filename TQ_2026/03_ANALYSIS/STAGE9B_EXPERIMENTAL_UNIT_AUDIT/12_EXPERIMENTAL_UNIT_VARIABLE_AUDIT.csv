@@ -1,0 +1,17 @@
+category,variable,status
+Observed analytical variables,TQ concentration,AVAILABLE
+Observed analytical variables,Muv binary phenotype,AVAILABLE
+Observed analytical variables,pseudovulva count,AVAILABLE
+Observed analytical variables,source worksheet row,AVAILABLE
+Experimental-unit / clustering variable,plate identifier,NOT_AVAILABLE
+Experimental-unit / clustering variable,batch identifier,NOT_AVAILABLE
+Experimental-unit / clustering variable,biological replicate identifier,NOT_AVAILABLE
+Experimental-unit / clustering variable,technical replicate identifier,NOT_AVAILABLE
+Experimental-unit / clustering variable,cohort identifier,NOT_AVAILABLE
+Experimental-unit / clustering variable,animal/worm identifier,NOT_AVAILABLE
+Experimental-unit / clustering variable,assay/run identifier,NOT_AVAILABLE
+Experimental-unit / clustering variable,observer identifier,NOT_AVAILABLE
+Experimental-unit / clustering variable,quadrant/position identifier,NOT_AVAILABLE
+Experimental-unit / clustering variable,experimental date,NOT_AVAILABLE
+Experimental-unit / clustering variable,developmental-stage field,NOT_AVAILABLE
+Experimental-unit / clustering variable,toxicity/developmental measurement,NOT_AVAILABLE

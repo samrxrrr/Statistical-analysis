@@ -1,0 +1,13 @@
+threshold,TQ,positive,negative,positive_lt_5,positive_lt_10,interpretation
+1,0,86,9,False,False,Adequate observed event count for descriptive sensitivity analysis.
+1,50,71,45,False,False,Adequate observed event count for descriptive sensitivity analysis.
+1,100,31,101,False,False,Adequate observed event count for descriptive sensitivity analysis.
+2,0,72,23,False,False,Adequate observed event count for descriptive sensitivity analysis.
+2,50,64,52,False,False,Adequate observed event count for descriptive sensitivity analysis.
+2,100,25,107,False,False,Adequate observed event count for descriptive sensitivity analysis.
+3,0,5,90,False,True,Sparse; interpret cautiously.
+3,50,1,115,True,True,Sparse; interpret cautiously.
+3,100,3,129,True,True,Sparse; interpret cautiously.
+4,0,0,95,True,True,Sparse; interpret cautiously.
+4,50,1,115,True,True,Sparse; interpret cautiously.
+4,100,0,132,True,True,Sparse; interpret cautiously.

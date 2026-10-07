@@ -1,0 +1,14 @@
+Classification,Claim
+SUPPORTED,TQ exposure was associated with a strong reduction in Muv occurrence across the tested concentrations.
+SUPPORTED,"The primary Muv prevalence decreased from 90.5% to 61.2% to 23.5% across 0, 50 and 100 uM."
+SUPPORTED,Pairwise treatment-associated differences remain robust under exact/Fisher inference and permutation testing.
+SUPPORTED,The whole-animal pseudovulva distribution differs substantially across exposure groups.
+SUPPORTED,"Among Muv-positive animals, conditional pseudovulva count did not differ detectably across exposure groups."
+SUPPORTED WITH LIMITATION,The experiment provides phenotypic evidence from a Ras/MAPK-associated C. elegans model.
+NOT SUPPORTED,Direct molecular Ras/MAPK inhibition.
+NOT SUPPORTED,Absence of toxicity.
+NOT SUPPORTED,Absence of developmental delay.
+NOT SUPPORTED,Progressive severity suppression among Muv-positive animals.
+NOT SUPPORTED,Severity plateau.
+NOT SUPPORTED,Predictive classifier performance.
+NOT SUPPORTED,Biological replication based solely on N=343.

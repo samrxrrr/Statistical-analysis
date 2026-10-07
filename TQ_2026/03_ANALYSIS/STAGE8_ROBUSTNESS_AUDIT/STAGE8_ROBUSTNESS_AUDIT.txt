@@ -1,0 +1,149 @@
+STAGE 8 ROBUSTNESS AUDIT
+==========================
+
+STATUS
+------
+PASS / FROZEN
+
+PURPOSE
+-------
+Independent robustness and forensic audit of the authoritative n=343
+TQ phenotype dataset before manuscript reconstruction.
+
+IMPORTANT ANALYTICAL DISTINCTION
+--------------------------------
+Stage 4/6 analyzed pseudovulva count across ALL animals.
+
+Stage 8 additionally analyzes pseudovulva count CONDITIONAL ON Muv
+positivity.
+
+These analyses are intentionally different and must not be numerically
+forced to agree.
+
+The conditional analysis avoids treating the absence of Muv as a
+severity value of zero when the scientific question is severity among
+animals that actually exhibit the phenotype.
+
+PRIMARY DATASET
+---------------
+N = 343
+
+Muv-positive:
+0 uM   = 86/95
+50 uM  = 71/116
+100 uM = 31/132
+
+GLOBAL MUV ROBUSTNESS
+---------------------
+100,000-permutation global association test completed.
+
+Monte Carlo P = 9.999900001e-06
+
+PAIRWISE MUV ROBUSTNESS
+-----------------------
+All three pairwise Fisher exact comparisons remain significant after
+Holm correction.
+
+MONOTONICITY
+------------
+Observed Muv prevalence decreases strictly across:
+0 uM > 50 uM > 100 uM
+
+Conditional severity analysis:
+------------------------------
+Muv-positive animals only.
+
+ TQ  n_Muv_positive     mean       SD  median  Q1  Q3  IQR  min  max  count_1  count_2  count_3  count_4
+  0              86 1.895349 0.460922     2.0 2.0 2.0  0.0    1    3       14       67        5        0
+ 50              71 1.929577 0.390016     2.0 2.0 2.0  0.0    1    4        7       63        0        1
+100              31 1.903226 0.538816     2.0 2.0 2.0  0.0    1    3        6       22        3        0
+
+Pairwise conditional severity:
+comparison  n_A  n_B      U    p_raw  rank_biserial_A_vs_B  p_Holm
+   0_vs_50   86   71 2978.5 0.690589             -0.024402     1.0
+  0_vs_100   86   31 1328.5 0.973535             -0.003376     1.0
+ 50_vs_100   71   31 1123.0 0.804751              0.020445     1.0
+
+Conditional Spearman:
+ n_Muv_positive  Spearman_rho        p                                                      interpretation
+            188      0.015158 0.836434 exploratory conditional severity; not independent of Muv occurrence
+
+INTERPRETATION
+--------------
+The strongest and most defensible phenotype-level finding is a
+concentration-associated reduction in Muv OCCURRENCE.
+
+Among animals that remain Muv-positive, pseudovulva count does not show
+a detectable concentration-associated difference.
+
+Therefore the revised manuscript should NOT claim:
+- progressive reduction in Muv severity,
+- dose-dependent severity reduction,
+- a severity plateau,
+- direct Ras/MAPK inhibition,
+- absence of toxicity,
+- absence of developmental effects.
+
+LEAVE-ONE-OBSERVATION-OUT
+-------------------------
+The primary trend remains directionally and statistically robust when
+each individual observation is removed in turn.
+
+ full_N     full_Z       full_p  LOO_min_Z  LOO_max_Z    LOO_min_p    LOO_max_p  LOO_all_negative_Z  LOO_all_p_lt_0_05  LOO_n
+    343 -10.129018 4.107544e-24 -10.242501 -10.084282 1.278874e-24 6.483743e-24                True               True    343
+
+EXPERIMENTAL UNIT
+-----------------
+The analytical dataset contains 343 phenotype observations.
+
+It does NOT contain identifiers establishing:
+- biological replicate
+- technical replicate
+- plate
+- assay/run
+- cohort
+- worm ID
+- developmental-stage ID
+- randomization
+- blinding
+
+Therefore n=343 must not be described as 343 independent biological
+experiments.
+
+STAGE 3-7 CROSS-CHECK
+---------------------
+Dataset size and primary Muv counts match the frozen analysis.
+
+The previous failed cross-check was caused by comparing two different
+estimands:
+
+Stage 4/6:
+whole-animal pseudovulva distribution
+
+versus
+
+Stage 8:
+conditional pseudovulva distribution among Muv-positive animals.
+
+That discrepancy is EXPECTED and scientifically meaningful.
+
+FINAL DECISION
+--------------
+PASS.
+
+Stage 8 robustness audit is frozen.
+
+Manuscript statistical strategy:
+- Primary endpoint: Muv occurrence.
+- Primary inference: ordered concentration association.
+- Effect sizes: risk difference, risk ratio, odds ratio with appropriate
+  direction and confidence intervals.
+- Secondary exploratory endpoint: pseudovulva count among Muv-positive
+  animals.
+- No ROC/AUC.
+- No predictive classification.
+- No unsupported logistic-regression prediction.
+- No direct molecular Ras/MAPK inhibition claim.
+- No unsupported toxicity/developmental safety claim.
+- No unsupported plateau claim.
+- No positive-control claim where no positive-control experiment exists.

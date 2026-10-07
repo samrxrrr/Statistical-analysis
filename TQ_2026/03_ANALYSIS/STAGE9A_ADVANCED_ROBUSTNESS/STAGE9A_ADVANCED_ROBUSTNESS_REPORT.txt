@@ -1,0 +1,174 @@
+STAGE 9A — ADVANCED ROBUSTNESS / EFFECT-SIZE AUDIT
+====================================================
+
+STATUS
+------
+PASS
+
+DATA
+----
+Authoritative analytical dataset
+N = 343
+TQ groups = 0, 50, 100 uM
+
+A — EFFECT SIZE
+---------------
+Three treatment/comparator contrasts were independently recomputed.
+
+comparison  treatment_n  treatment_Muv  treatment_prevalence  treatment_exact_95CI_low  treatment_exact_95CI_high  comparator_n  comparator_Muv  comparator_prevalence  comparator_exact_95CI_low  comparator_exact_95CI_high  risk_difference  RD_Newcombe95CI_low  RD_Newcombe95CI_high  risk_ratio  RR_log95CI_low  RR_log95CI_high  odds_ratio  Fisher_exact_p
+   50_vs_0          116             71              0.612069                  0.517150                   0.701120            95              86               0.905263                   0.827765                    0.955759        -0.293194            -0.394230             -0.180394    0.676123        0.576840         0.792494    0.165116    6.685460e-07
+  100_vs_0          132             31              0.234848                  0.165486                   0.316482            95              86               0.905263                   0.827765                    0.955759        -0.670415            -0.748282             -0.560946    0.259426        0.189379         0.355380    0.032121    1.898124e-25
+ 100_vs_50          132             31              0.234848                  0.165486                   0.316482           116              71               0.612069                   0.517150                    0.701120        -0.377220            -0.482713             -0.256667    0.383696        0.273021         0.539235    0.194534    1.782076e-09
+
+Exact binomial confidence intervals were calculated for each group
+prevalence. Newcombe-Wilson intervals were calculated for risk
+differences.
+
+C — ORDERED DOSE STRUCTURE
+--------------------------
+Observed prevalence:
+
+ TQ   n  Muv_positive  prevalence
+  0  95            86    0.905263
+ 50 116            71    0.612069
+100 132            31    0.234848
+
+Strict ordering 0 > 50 > 100:
+True
+
+Spearman dose/Muv rho:
+-0.548177025227
+
+Spearman P:
+2.69114268381e-28
+
+Adjacent-dose analysis:
+ lower_dose  higher_dose  lower_prevalence  higher_prevalence  risk_difference_higher_minus_lower     Fisher_p
+          0           50          0.905263           0.612069                           -0.293194 6.685460e-07
+         50          100          0.612069           0.234848                           -0.377220 1.782076e-09
+          0          100          0.905263           0.234848                           -0.670415 1.898124e-25
+
+Interpretation:
+The data show a strictly monotonic observed decrease in Muv prevalence
+across the three tested concentrations.
+
+This supports an ordered concentration association.
+
+It does NOT establish a continuous linear molecular dose-response
+relationship.
+
+D — CONDITIONAL SEVERITY
+------------------------
+Muv-positive animals only:
+n = 188
+
+Kruskal-Wallis:
+H = 0.155389969616
+P = 0.925246597777
+
+Pairwise:
+comparison  n_A  n_B      U    p_raw  rank_biserial_A_vs_B  probability_superiority_A_over_B  p_Holm
+   0_vs_50   86   71 2978.5 0.690589             -0.024402                          0.487799     1.0
+  0_vs_100   86   31 1328.5 0.973535             -0.003376                          0.498312     1.0
+ 50_vs_100   71   31 1123.0 0.804751              0.020445                          0.510223     1.0
+
+Permutation test:
+0.942380576194
+
+Rare-tail sensitivity:
+sensitivity_definition   N     KW_H     KW_p  Spearman_rho  Spearman_p
+      All Muv-positive 188 0.155390 0.925247      0.015158    0.836434
+ Exclude pseudovulva=4 187 0.027051 0.986565      0.007891    0.914640
+Exclude pseudovulva>=3 179 2.584065 0.274712      0.015622    0.835577
+
+Interpretation:
+Conditional pseudovulva severity does not show a detectable
+concentration-associated shift.
+
+This means the primary effect is more clearly an effect on Muv
+OCCURRENCE than on pseudovulva COUNT among animals that remain Muv
+positive.
+
+E — BAYESIAN ANALYSIS
+---------------------
+Prior:
+Jeffreys Beta(0.5,0.5)
+
+                 prior  posterior_P_p50_less_p0  posterior_P_p100_less_p0  posterior_P_p100_less_p50  posterior_P_p0_gt_p50_gt_p100  posterior_mean_p0  posterior_mean_p50  posterior_mean_p100  posterior_RD_50_minus_0_mean  posterior_RD_100_minus_0_mean  posterior_RD_100_minus_50_mean  posterior_RR_50_vs_0_median  posterior_RR_100_vs_0_median  posterior_RR_100_vs_50_median
+Jeffreys Beta(0.5,0.5)                      1.0                       1.0                        1.0                            1.0           0.901066            0.611107             0.236844                     -0.289959                      -0.664222                       -0.374263                     0.678396                      0.261431                       0.385717
+
+Posterior prevalence intervals:
+ TQ  posterior_mean  posterior_median  CrI_2.5  CrI_97.5
+  0        0.901066          0.903818 0.834430  0.952001
+ 50        0.611107          0.611749 0.521587  0.697035
+100        0.236844          0.235531 0.168769  0.312415
+
+Posterior risk differences:
+comparison  posterior_P_RD_less_0  posterior_mean_RD  posterior_median_RD   CrI_2.5  CrI_97.5
+   50_vs_0                    1.0          -0.289959            -0.290369 -0.394928 -0.182862
+  100_vs_0                    1.0          -0.664222            -0.666124 -0.751992 -0.565746
+ 100_vs_50                    1.0          -0.374263            -0.375163 -0.485229 -0.258171
+
+Interpretation:
+The Bayesian analysis provides an independent probabilistic
+confirmation of the direction of the primary effect.
+
+F — INFLUENCE ANALYSIS
+----------------------
+comparison   full_RD  LOO_min_RD  LOO_max_RD  max_absolute_RD_change  all_LOO_RD_same_direction
+   50_vs_0 -0.293194   -0.302825   -0.287872                0.009630                       True
+  100_vs_0 -0.670415   -0.680045   -0.668622                0.009630                       True
+ 100_vs_50 -0.377220   -0.383061   -0.373847                0.005841                       True
+
+All leave-one-out primary pairwise risk differences remain in the
+same protective direction.
+
+G — ENDPOINT DEPENDENCY
+-----------------------
+Muv == (Pseudovulva > 0):
+True
+
+Mismatches:
+0
+
+This mathematical dependency explains why whole-animal pseudovulva
+analysis and Muv occurrence cannot be treated as independent endpoints.
+
+The conditional Muv-positive severity analysis is therefore the
+appropriate exploratory analysis of severity.
+
+OVERALL SCIENTIFIC INTERPRETATION
+----------------------------------
+The authoritative dataset supports a strong and reproducible
+concentration-associated reduction in the OCCURRENCE of the Muv
+phenotype.
+
+The data do not provide evidence that increasing TQ concentration
+progressively reduces pseudovulva count among animals that remain
+Muv-positive.
+
+The revised manuscript should therefore describe two distinct
+phenotypic dimensions:
+
+1. Phenotype occurrence:
+   strongly reduced with increasing applied TQ concentration.
+
+2. Conditional severity:
+   no detectable concentration-associated difference among
+   Muv-positive animals.
+
+This is a stronger and more defensible interpretation than combining
+the two endpoints into a single severity claim.
+
+PROHIBITED INTERPRETATIONS
+--------------------------
+- direct Ras/MAPK inhibition
+- molecular pathway activity suppression
+- continuous linear dose-response claim
+- progressive conditional severity reduction
+- severity plateau claim
+- toxicity absence
+- developmental-safety claim
+- predictive classifier performance
+- ROC/AUC evidence
+- biological replication inferred from n=343

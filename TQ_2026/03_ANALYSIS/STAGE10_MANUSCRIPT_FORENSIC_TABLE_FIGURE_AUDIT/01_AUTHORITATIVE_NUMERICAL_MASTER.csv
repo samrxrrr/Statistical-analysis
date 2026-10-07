@@ -1,0 +1,4 @@
+Dose,N,Muv_positive,Muv_negative,Muv_prevalence,Pseudovulva_mean,Pseudovulva_median
+0 uM,95,86,9,0.905263158,1.715789474,2
+50 uM,116,71,45,0.612068966,1.181034483,2
+100 uM,132,31,101,0.234848485,0.446969697,0

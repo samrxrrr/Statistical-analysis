@@ -1,0 +1,114 @@
+============================================================
+STAGE 11 — SUBMITTED MANUSCRIPT FORENSIC RECONCILIATION
+============================================================
+
+STATUS
+------
+PASS
+
+SUBMITTED MANUSCRIPT
+--------------------
+JBSC-D-26-00355.pdf
+
+The submitted manuscript itself is the historical authority for
+what was actually submitted to Journal of Biosciences.
+
+CRITICAL N=106 CLARIFICATION
+----------------------------
+N=106 is NOT a submitted-manuscript sample-size claim.
+
+The submitted manuscript uses:
+n=35 per group
+N=105 total
+
+The manuscript contains unrelated numerical occurrences of 106
+inside bibliographic material, but no N=106 experimental dataset
+claim.
+
+Therefore:
+N=106 is excluded from the manuscript forensic reconstruction.
+
+CURRENT AUTHORITATIVE DATASET
+-----------------------------
+N=343
+0 uM  = 95
+50 uM = 116
+100 uM = 132
+
+PRIMARY OUTCOME
+---------------
+Muv occurrence.
+
+SECONDARY OUTCOME
+-----------------
+Pseudovulva count.
+
+CONDITIONAL SEVERITY
+--------------------
+Muv-positive only:
+H = 0.155390
+P = 0.925247
+
+Therefore the revised manuscript must NOT state that TQ progressively
+reduces pseudovulva severity after Muv has already developed.
+
+SUBMITTED-MANUSCRIPT ITEMS REQUIRING REMOVAL/REPLACEMENT
+---------------------------------------------------------
+N=105 / n=35 group structure
+Old prevalence values
+Old Cochran-Armitage statistic
+Old Pearson statistic
+Old Kruskal-Wallis statistic
+Binary logistic regression
+Ordinal logistic regression
+ROC/AUC
+Hosmer-Lemeshow
+Bootstrap model validation
+Jackknife model validation
+NNT
+Severity plateau interpretation
+Unsupported toxicity statement
+Unsupported developmental-arrest statement
+Direct mechanistic Ras/MAPK interpretation
+
+FINAL MAIN FIGURES
+------------------
+F1 Experimental design
+F2 Muv prevalence
+F3 Whole-animal pseudovulva distribution
+F4 Conditional severity
+F5 Pairwise risk differences
+F6 Permutation robustness
+F7 Threshold robustness
+
+FINAL MAIN TABLES
+-----------------
+T1 Primary Muv outcome
+T2 Pairwise effect sizes
+T3 Pseudovulva distribution + conditional severity
+
+SUPPLEMENTARY
+-------------
+S1 Complete pseudovulva distribution
+S2 Threshold robustness
+S3 Permutation robustness
+S4 Experimental-unit metadata audit
+
+IMPORTANT STATISTICAL BOUNDARY
+------------------------------
+Permutation global/effect-size tests are highly extreme.
+
+Strict-order permutation:
+P = 0.161218
+
+>=2 ordering permutation:
+P = 0.168638
+
+Neither ordering statistic will be presented as permutation-significant.
+
+NEXT
+----
+Generate the actual final tables and figures from the authoritative
+N=343 dataset.
+
+No manuscript prose reconstruction yet.

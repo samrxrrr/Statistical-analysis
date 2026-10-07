@@ -1,0 +1,6 @@
+unsafe_or_overstrong,preferred,reason
+343 independent biological replicates,343 animal-level observations,Independent biological replicate identifiers are unavailable.
+n=343 independent animals across replicated experiments,343 recorded animal-level observations,Experimental replication cannot be reconstructed.
+biological replication confirmed,biological replication was not identifiable from the archived dataset,No replicate/cohort metadata.
+randomized allocation,allocation procedure cannot be verified from the archived dataset,No allocation/randomization metadata.
+independent observations,animal-level observations,Independence cannot be verified without clustering metadata.

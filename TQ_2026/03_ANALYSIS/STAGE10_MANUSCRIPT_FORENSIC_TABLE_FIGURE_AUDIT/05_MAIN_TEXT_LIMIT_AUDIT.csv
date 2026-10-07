@@ -1,0 +1,11 @@
+Component,Proposed_count,Allowed_limit,Status
+Main figures,7,7,PASS
+Main tables,3,3,PASS
+Supplementary figures,3,,ALLOWED
+Supplementary tables,4,,ALLOWED
+ROC/AUC,0,,REMOVED
+Predictive modeling,0,,REMOVED
+Logistic regression,0,,REMOVED
+Severity plateau,0,,REMOVED
+Unsupported toxicity claim,0,,REFRAMED
+Direct Ras/MAPK inhibition claim,0,,REFRAMED

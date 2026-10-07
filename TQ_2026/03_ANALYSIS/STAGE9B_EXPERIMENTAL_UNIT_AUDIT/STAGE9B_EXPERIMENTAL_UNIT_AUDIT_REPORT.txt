@@ -1,0 +1,90 @@
+STAGE 9B — EXPERIMENTAL-UNIT / REPLICATION FORENSIC AUDIT
+==============================================================
+
+STATUS
+------
+PASS — DATA STRUCTURE AUDITED
+
+DATASET
+-------
+N = 343
+Groups = 0, 50, 100 uM
+Source rows unique = True
+Muv/pseudovulva dependency exact =
+True
+
+CORE FINDING
+------------
+The dataset contains 343 recorded animal-level observations.
+
+It does not contain sufficient metadata to establish:
+- number of biological replicate experiments
+- number of independent cohorts
+- plate-level clustering
+- technical replicates
+- batch structure
+- animal identifiers
+- assay/run identifiers
+- observer structure
+- randomization
+
+IMPORTANT DISTINCTION
+---------------------
+Repeated identical phenotype combinations are NOT evidence of
+duplicate animals because source rows are unique.
+
+However, unique source rows are NOT evidence of biological
+independence.
+
+STATISTICAL CONSEQUENCE
+-----------------------
+The existing analyses can describe and test the observed association
+between TQ concentration and phenotype at the animal-observation
+level.
+
+They cannot reconstruct an experiment-level random-effects structure.
+
+No unsupported mixed-effects or cluster correction should therefore
+be invented.
+
+REPLICATION LANGUAGE
+--------------------
+Use:
+
+"343 animal-level observations"
+
+Do NOT use:
+
+"343 biological replicates"
+"343 independent experiments"
+"343 independent biological replicates"
+
+UNRESOLVED LIMITATION
+---------------------
+Independent biological replication cannot be reconstructed from the
+archived analytical dataset because plate, batch, cohort and replicate
+identifiers are absent.
+
+RANDOMIZATION
+-------------
+Source-row order cannot establish random allocation.
+
+PSEUDOREPLICATION
+-----------------
+The risk cannot be fully quantified because clustering metadata are
+absent.
+
+The correct approach is transparent limitation reporting, not
+statistical reconstruction of unavailable metadata.
+
+RECOMMENDED MANUSCRIPT POSITION
+-------------------------------
+Present the study as a phenotypic, animal-level observational dataset
+with a strong within-dataset concentration-associated reduction in Muv
+occurrence.
+
+Explicitly acknowledge that independent biological replication and
+plate-level clustering cannot be evaluated from the archived dataset.
+
+Do not claim that the large animal-level N compensates for absence of
+biological replication.

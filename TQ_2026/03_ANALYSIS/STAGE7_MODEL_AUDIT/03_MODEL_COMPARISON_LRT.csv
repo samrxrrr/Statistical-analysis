@@ -1,0 +1,2 @@
+continuous_model_logLik,categorical_model_logLik,LR_statistic_categorical_vs_continuous,df_difference,p_value,interpretation
+-179.22842350042157,-179.18487312835845,0.08710074412624635,1,0.7678958320817865,No evidence that categorical dose improves fit over simple linear dose trend

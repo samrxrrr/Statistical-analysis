@@ -1,0 +1,69 @@
+STAGE 9D — THRESHOLD ROBUSTNESS MATRIX
+========================================
+
+STATUS
+------
+PASS
+
+DATA
+----
+N = 343
+TQ groups = 0, 50, 100 uM
+Thresholds = >=1, >=2, >=3, >=4 pseudovulvae
+
+PURPOSE
+-------
+Determine whether the observed concentration-associated phenotype
+reduction is robust to reasonable threshold definitions.
+
+PRIMARY ENDPOINT
+----------------
+>=1 pseudovulva is identical to the recorded Muv endpoint.
+
+>=2, >=3 and >=4 are exploratory sensitivity thresholds.
+
+KEY PRINCIPLE
+-------------
+Threshold analyses are sensitivity analyses.
+
+They do not redefine the primary endpoint.
+
+ROBUSTNESS CRITERIA
+-------------------
+For each threshold we examined:
+
+- exact prevalence confidence intervals
+- Fisher exact pairwise inference
+- Newcombe risk differences
+- relative risks
+- odds ratios
+- Holm-adjusted pairwise P-values
+- Bayesian posterior risk differences
+- Bayesian ordered probabilities
+- leave-one-out risk-difference sensitivity
+- sparsity of positive events
+- observed monotonicity
+
+INTERPRETATION
+--------------
+The >=1 and >=2 thresholds are the most informative because they
+contain substantial numbers of positive observations across groups.
+
+The >=3 and >=4 thresholds become sparse and should not be used as
+primary evidence for a concentration-response relationship.
+
+The final manuscript should therefore emphasize the robustness of the
+effect across >=1 and >=2 phenotype definitions while explicitly
+acknowledging sparse higher-severity categories.
+
+IMPORTANT
+---------
+No threshold analysis establishes direct Ras/MAPK inhibition.
+
+No threshold analysis establishes absence of toxicity.
+
+No threshold analysis establishes biological replication.
+
+No threshold analysis establishes a continuous molecular
+dose-response relationship.
+

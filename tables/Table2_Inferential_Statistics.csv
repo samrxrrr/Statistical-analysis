@@ -1,8 +1,0 @@
-Analysis,Statistic,Effect Size,95% Confidence Interval,P-value,Interpretation
-Pearson Chi-square,χ² = 28.366,Large,-,<0.000001,Strong association between treatment and MUV phenotype
-Cramer's V,V = 0.520,Large,-,-,Large effect size
-Kruskal-Wallis,H = 23.750,-,-,0.000007,Severity differs significantly among groups
-Dunn Post Hoc,"0 vs 50, 0 vs 100",-,-,0.0046 / 0.000005,Control differs significantly from both treatment groups
-Binary Logistic Regression,β = -1.480,OR = 0.228,0.125–0.416,<0.001,Dose significantly decreases odds of MUV
-Ordered Logistic Regression,β = -1.264,OR = 0.283,0.165–0.485,<0.001,Dose significantly decreases severity
-Bootstrap Validation,Bootstrap OR = 0.226,95% CI = 0.106–0.377,0.106–0.377,-,Bootstrap confirms model stability

@@ -1,0 +1,30 @@
+Metric,Value,Status,Source
+Total N,343,LOCKED,Authoritative dataset
+0 uM N,95,LOCKED,Authoritative dataset
+50 uM N,116,LOCKED,Authoritative dataset
+100 uM N,132,LOCKED,Authoritative dataset
+0 uM Muv+,86,LOCKED,Authoritative dataset
+50 uM Muv+,71,LOCKED,Authoritative dataset
+100 uM Muv+,31,LOCKED,Authoritative dataset
+0 uM prevalence,0.905263158,LOCKED,Stage 3/9A
+50 uM prevalence,0.612068966,LOCKED,Stage 3/9A
+100 uM prevalence,0.234848485,LOCKED,Stage 3/9A
+Cochran-Armitage Z,-10.129018,LOCKED,Stage 4
+Cochran-Armitage P,4.107544e-24,LOCKED,Stage 4
+Pearson chi-square,103.139089,LOCKED,Stage 4
+Pearson P,4.0145e-23,LOCKED,Stage 4
+Cramer's V,0.548359,LOCKED,Stage 4
+Whole-animal KW H,92.489158,LOCKED,Stage 4/6
+Whole-animal KW P,8.245834e-21,LOCKED,Stage 4/6
+Whole-animal epsilon2,0.266145,LOCKED,Stage 6
+Conditional severity KW H,0.155390,LOCKED,Conditional severity
+Conditional severity P,0.925247,LOCKED,Conditional severity
+Spearman dose/Muv rho,-0.548177,LOCKED,Stage 4
+Spearman dose/pseudovulva rho,-0.519632,LOCKED,Stage 9C
+Permutation Muv P,9.9999e-06,LOCKED,"100,000 permutations"
+Permutation KW P,9.9999e-06,LOCKED,"100,000 permutations"
+Permutation RD 50 vs 0 P,2.99997e-05,LOCKED,"100,000 permutations"
+Permutation RD 100 vs 0 P,9.9999e-06,LOCKED,"100,000 permutations"
+Permutation RD 100 vs 50 P,9.9999e-06,LOCKED,"100,000 permutations"
+Strict ordering permutation P,0.161218,DO NOT CLAIM SIGNIFICANT,Ordering alone
+>=2 ordering permutation P,0.168638,DO NOT CLAIM SIGNIFICANT,Ordering alone

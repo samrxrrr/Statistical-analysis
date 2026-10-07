@@ -1,0 +1,2 @@
+prior,posterior_P_p50_less_p0,posterior_P_p100_less_p0,posterior_P_p100_less_p50,posterior_P_p0_gt_p50_gt_p100,posterior_mean_p0,posterior_mean_p50,posterior_mean_p100,posterior_RD_50_minus_0_mean,posterior_RD_100_minus_0_mean,posterior_RD_100_minus_50_mean,posterior_RR_50_vs_0_median,posterior_RR_100_vs_0_median,posterior_RR_100_vs_50_median
+"Jeffreys Beta(0.5,0.5)",0.9999995,1.0,1.0,0.9999995,0.9010658617627735,0.6111068516548351,0.23684422367240104,-0.2899590101079384,-0.6642216380903726,-0.3742626279824341,0.6783964447042606,0.2614307721692599,0.38571664913033454

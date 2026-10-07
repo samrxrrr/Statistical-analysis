@@ -1,0 +1,37 @@
+TQ DATASET STRUCTURE AUDIT
+================================================================================
+Sheet: Sheet1
+Header: ['TQ', '%', 'Pseudovulva']
+Total data rows: 421
+Non-empty TQ rows: 343
+
+TQ = 0.0 µM
+  n = 95
+  % endpoint counts = {0.0: 9, 1.0: 86}
+  pseudovulva counts = {0.0: 9, 2.0: 67, 1.0: 14, 3.0: 5}
+  pseudovulva min = 0.0
+  pseudovulva max = 3.0
+  pseudovulva mean = 1.715789
+
+TQ = 50.0 µM
+  n = 116
+  % endpoint counts = {0.0: 45, 1.0: 71}
+  pseudovulva counts = {0.0: 45, 1.0: 7, 2.0: 63, 4.0: 1}
+  pseudovulva min = 0.0
+  pseudovulva max = 4.0
+  pseudovulva mean = 1.181034
+
+TQ = 100.0 µM
+  n = 132
+  % endpoint counts = {0.0: 101, 1.0: 31}
+  pseudovulva counts = {0.0: 101, 2.0: 22, 1.0: 6, 3.0: 3}
+  pseudovulva min = 0.0
+  pseudovulva max = 3.0
+  pseudovulva mean = 0.446970
+
+IMPORTANT STRUCTURAL FINDING
+--------------------------------------------------------------------------------
+The workbook contains no plate, batch, biological replicate, cohort,
+developmental-stage, worm-ID, or experimental-run column in the
+three populated analytical columns. Therefore replicate structure
+cannot be inferred from this workbook alone.
